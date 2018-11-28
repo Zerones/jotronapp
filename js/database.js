@@ -29,7 +29,7 @@ function addProfile()
 var pasanger = {
 
     pasangers: [
-        { name: 'Sophia Gibson', address: 'Jonas Lies Vei 10C', city: 'Larvik', mobile: '22470519'},
+        { name: 'Magnus Viken', city: 'Sande', gatenavn: 'kaiveien', husnr: '8', mobile: '22470519'},
         { name: 'Gunnvor Espenson', address: 'Nanset Gata 32', city: 'Sande', mobile: '79416663' },
         { name: 'Elias Jacobsen', address: 'Hagalia 32', city: 'Larvik', mobile: '52212504'  },
         { name: 'Monika Isaksen', address: 'Torget 10', city: 'Larvik', mobile: '90967881'  },
