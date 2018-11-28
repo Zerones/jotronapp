@@ -1130,8 +1130,7 @@ b.color18 {
     border-color: #707070;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20px;
-    padding: 5px 30px;
+    padding: 10px 30px;
 }
 .profile5
 {
@@ -1141,7 +1140,29 @@ b.color18 {
     margin-left: auto;
     padding: 10px 90px;
     margin-top: 10px;
-    
+
+}
+.profile6
+{
+    grid-area: profile6;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 30px;
+
+}
+.profile7
+{
+    grid-area: profile7;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 5px 30px;
 }
 .ProfileBoks 
 {
@@ -1155,6 +1176,8 @@ b.color18 {
         'profile2 profile2'
         'profile3 profile3'
         'profile4 profile4'
+        'profile6 profile6'
+        'profile7 profile7'
         'profile5 profile5';
     padding-bottom: 40px;
     background-color: none;

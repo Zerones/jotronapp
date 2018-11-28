@@ -16,116 +16,67 @@ var brukerNavn;
 var nyProfile;
 var brukerNavnT;
 
+
+
 function showProPage() 
 {
     var mainContentDiv = document.getElementById('mainContent');
-    if(!brukerNavnT == '')
-    {
-        if( !pickupT == '')
-        {
-            mainContentDiv.innerHTML = `
-  
-   
-            <div class="backtop"></div>        
-            <div class="backheadpassreq">   Profile    </div>
-            <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
-            <div onclick="showMenu()" class="backbutton"></div></a>
-                   
-               <div class="lele2"><h2></h2></div>    
-               <div class="backgroundkaos"></div>      
-               <div class="profileBilde"></div>
-               <div class="ProfileBoks">  
-        
-                       <div id="Navn" class="profileNavn">` + brukerNavnT + `</div>
-                       <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + phoneT + `</div></div>
-                       <div class="profile2">Email <br><div id="mail" class="profileInfo">` + emailT + `</div></div>
-                       <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + pickupT + `</div></div>
-                       <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + statusT + `</div></div>
-                       <div class="profile5" onclick="profileEdit()">Edit Profile</div>
-               
-               </div>
-               
-               `;
-        }
-        else
-        {
-            mainContentDiv.innerHTML = `
+    var pro = ProfileInfo[0];
+    var ny = ProfileInfo[1];
 
-            <div class="backtop"></div>        
-            <div class="backheadpassreq">   Profile    </div>
-            <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
-            <div onclick="showMenu()" class="backbutton"></div></a>
-                
-            <div class="lele2"><h2></h2></div>    
-            <div class="backgroundkaos"></div>      
-            <div class="profileBilde"></div>
-            <div class="ProfileBoks">  
-        
-                    <div id="Navn" class="profileNavn">` + brukerNavnT + `</div>
-                    <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + phoneT + `</div></div>
-                    <div class="profile2">Email <br><div id="mail" class="profileInfo">` + emailT + `</div></div>
-                    <div class="profile3">Pick up Point <br><div id="point" class="profileInfo"></div></div>
-                    <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + statusT + `</div></div>
-                    <div class="profile5" onclick="profileEdit()">Edit Profile</div>
-            
-           </div>
-           
-           `; 
-        }
-
-    }
-    else
+    if(ny = !undefined)
     {
         mainContentDiv.innerHTML = `
   
-   
         <div class="backtop"></div>        
         <div class="backheadpassreq">   Profile    </div>
         <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
         <div onclick="showMenu()" class="backbutton"></div></a>
-               
-           <div class="lele2"><h2></h2></div>    
-           <div class="backgroundkaos"></div>      
-           <div class="profileBilde"></div>
-           <div class="ProfileBoks">  
-               
-                   <div id="Navn" class="profileNavn">Houng Dajin</div>
-                   <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">47 33 24 99</div></div>
-                   <div class="profile2">Email <br><div id="mail" class="profileInfo">Tester@GetAcademy.no</div></div>
-                   <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">Torget 10 3269 LARVIK</div></div>
-                   <div class="profile4">Driver Status<br><div id="status" class="profileInfo">Available</div></div>
-                   <div class="profile5" onclick="profileEdit()">Edit Profile</div>
-           
-           </div>`;
+                   
+            <div class="lele2"><h2></h2></div>    
+            <div class="backgroundkaos"></div>      
+            <div class="profileBilde"></div>
+            <div class="ProfileBoks">  
+                    <div id="Navn" class="profileNavn">` + pro.username + `</div>
+                    <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div></div>
+                    <div class="profile2">Email <br><div id="mail" class="profileInfo">` + pro.email + `</div></div>
+                    <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div></div>
+                    <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + pro.status + `</div></div>
+                    <div class="profile6"> Passenger?: <div class="profileInfo"> `+ pro.role[1] +`</div></div>
+                    <div class="profile7"> Driver?: <div class="profileInfo">`+ pro.role[0] +`</div></div>        
+                    <div class="profile5" onclick="profileEdit()">Edit Profile</div>
+            </div>`
+        ;
     }
-    PhoneCP = document.getElementById('nummer').innerText;
-    EmailCP = document.getElementById('mail').innerText;
-    PickupCP = document.getElementById('point').innerText;
-    statusCP = document.getElementById('status').innerText;
-}
-function profileCreate() 
-{
-        var mainContentDiv = document.getElementById('mainContent');
+    else
+    {
         mainContentDiv.innerHTML = `
-    
+
         <div class="backtop"></div>        
         <div class="backheadpassreq">   Profile    </div>
-        <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-        <a href="index.html"><div class="backbutton"></div></a>
+        <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
+        <div onclick="showMenu()" class="backbutton"></div></a>
+    
         <div class="lele2"><h2></h2></div>    
         <div class="backgroundkaos"></div>      
         <div class="profileBilde"></div>
-        <div class="ProfileEdit">       
-                <div class="profilePhone"><input type="text" id="brukerNavn" name="Number" placeholder="Brukernavn" style="border: none; text-align: center;"></div>
-                <div class="profileEmail"><input type="text" id="emailT"  name="Mail" placeholder="Email Adress"  style="border: none; text-align: center;"></div>
-                <div class="profilePickup"><input type="text" id="phoneT" name="Point" placeholder="Phone Number" style="border: none; text-align: center;"></div>
-                <div class="profileStatus"><input type="text" id="statusT" name="Status" placeholder="Driver Status" style="border: none; text-align: center;"></div>
-                <div class="profilePassword"><input type="password" id="passT" name="Password" placeholder="New Password" style="border: none; text-align: center;"></div>
-                <div class="profileConfirm"><input type="password" id="passTC" name="PassAgain" placeholder="New Password Again" style="border: none; text-align: center;"></div>
-                <div class="profileSave" id="feilsokk" onclick="saveP()">Save Changes</div>
+        <div class="ProfileBoks">  
+            <div id="Navn" class="profileNavn">` + ny.username + `</div>
+            <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + ny.phoneNumber + `</div></div>
+            <div class="profile2">Email <br><div id="mail" class="profileInfo">` + ny.email + `</div></div>
+            <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + ny.pickPoint + `</div></div>
+            <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + ny.status + `</div></div>
+            <div class="profile6"> Passenger?: <div class="profileInfo"> `+ ny.role[1] +`</div></div>
+            <div class="profile7"> Driver?: <div class="profileInfo">`+ ny.role[0] +`</div></div>
+            <div class="profile5" onclick="profileEdit()">Edit Profile</div>
         </div>
-        `;
-        nyProfile = true;
+           
+           `; 
+    }
+}
+function profileCreate() 
+{
+    return;
 }
 function profileEdit() 
 {
@@ -149,7 +100,6 @@ function profileEdit()
                 <div class="profileSave" id="feilsokk" onclick="saveP()">Save Changes</div>
         </div>
         `;
-        nyProfile = false;
 }
 function saveP()
 {               
