@@ -1,3 +1,4 @@
+    function ShowDriverAppointments() {
     var trip = {
         passengers: [0, 3, 4]
     };
@@ -34,4 +35,4 @@
             `;
     }
     mainContentDiv.innerHTML += '</div></div>';
-}
+    }
