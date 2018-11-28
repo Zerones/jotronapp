@@ -1,4 +1,3 @@
-    function ShowDriverAppointments() {
     var trip = {
         passengers: [0, 3, 4]
     };
@@ -20,6 +19,8 @@
         var name = apps[i].name;
         var mobile = apps[i].mobile;
         var city = apps[i].city;
+        var gatenavn = apps[i].gatenavn;
+        var husnr = apps[i].husnr;
 
         if (!trip.passengers.includes(i)) continue;
         mainContentDiv.innerHTML += `
@@ -27,10 +28,10 @@
                         <h1 class="sjaforfortest123">${name}</h1>
                         <p class="sjaforfortlfnumber1">${mobile}</p>
                         <p id="sjaforforavstand1">Distance: </p>
-                        <div id="sjaforforgooglemaps1">Google Maps</div>
+                        <div id="sjaforforgooglemaps1"><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB">Google Maps</a></div>
                         <div class="sjaforforAvlys1">Cancel</div>
                     </div>
             `;
     }
     mainContentDiv.innerHTML += '</div></div>';
-    }
+}
