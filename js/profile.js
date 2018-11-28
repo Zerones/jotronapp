@@ -15,40 +15,45 @@ function showProPage()
     var mainContentDiv = document.getElementById('mainContent');
     var pro = ProfileInfo[0];
     var ny = ProfileInfo[1];
-
     if(ny = !undefined)
     {
-        mainContentDiv.innerHTML =  toptekstenbragehemmeligvar + `
-
-            <div class="ProfileBoks">  
-                    <div id="Navn" class="profileNavn">` + pro.username + `</div>
-                    <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div></div>
-                    <div class="profile2">Email <br><div id="mail" class="profileInfo">` + pro.email + `</div></div>
-                    <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div></div>
-                    <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + pro.status + `</div></div>
-                    <div class="profile5"> Passenger?: <div class="profileInfo"> `+ pro.role[1] +`</div></div>
-                    <div class="profile6"> Driver?: <div class="profileInfo">`+ pro.role[0] +`</div></div>        
-                    <div class="profile7" onclick="profileEdit()">Edit Profile</div>
-            </div>`
-        ;
+        let lagrefill;
+        lagrefill += `<div class="ProfileBoks">`;
+        lagrefill += `<div class="profileNavn">` + pro.username + `</div>`;
+        for(let i = 1; i < 8; i++)
+        {
+            lagrefill += `<div class="profile` + i + `">`;
+            if(i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
+            if(i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
+            if(i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
+            if(i == 4) lagrefill += `Driver Status<br><div id="status" class="profileInfo">` + pro.status + `</div>`;
+            if(i == 5) lagrefill += `Passenger?: <div class="profileInfo"> `+ pro.role[1] +`</div>`;
+            if(i == 6) lagrefill += `Driver?: <div class="profileInfo">`+ pro.role[0] +`</div>`;
+            if(i == 7) lagrefill += `<div onclick="profileEdit()">Edit Profile</div>`;
+            lagrefill += `</div>`;
+        }
+        lagrefill += `</div>`;
+        mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
     }
     else
     {
-        mainContentDiv.innerHTML = toptekstenbragehemmeligvar + `
-
-        <div class="ProfileBoks">  
-            <div id="Navn" class="profileNavn">` + ny.username + `</div>
-            <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + ny.phoneNumber + `</div></div>
-            <div class="profile2">Email <br><div id="mail" class="profileInfo">` + ny.email + `</div></div>
-            <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + ny.pickPoint + `</div></div>
-            <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + ny.status + `</div></div>
-            <div class="profile5"> Passenger?: <div class="profileInfo"> `+ ny.role[1] +`</div></div>
-            <div class="profile6"> Driver?: <div class="profileInfo">`+ ny.role[0] +`</div></div>
-            <div class="profile7" onclick="profileEdit()">Edit Profile</div>
-        </div>
-           
-           `;
-         
+        let lagrefill;
+        lagrefill += `<div class="ProfileBoks">`;        
+        lagrefill += `<div class="profileNavn">` + ny.username + `</div>`;
+        for(let i = 1; i < 8; i++)
+        {
+            lagrefill += `<div class="profile` + i + `">`;
+            if(i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + ny.phoneNumber + `</div>`;
+            if(i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + ny.email + `</div>`;
+            if(i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + ny.pickPoint + `</div>`;
+            if(i == 4) lagrefill += `Driver Status<br><div id="status" class="profileInfo">` + ny.status + `</div>`;
+            if(i == 5) lagrefill += `Passenger?: <div class="profileInfo"> `+ ny.role[1] +`</div>`;
+            if(i == 6) lagrefill += `Driver?: <div class="profileInfo">`+ ny.role[0] +`</div>`;
+            if(i == 7) lagrefill += `<div onclick="profileEdit()">Edit Profile</div>`;
+            lagrefill += `</div>`;
+        }
+        lagrefill += `</div>`;
+        mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
     }
 }
 function profileCreate() 
@@ -88,74 +93,4 @@ function profileEdit()
                                                                     'profilePass2 profilePass2'
                                                                     'profile7 profile7'
         `;
-}
-function saveProfile()
-{               
-        var mainContentDiv = document.getElementById('mainContent');
-        phoneNumberP = PhoneCP;
-        EmailP = EmailCP;
-        PickupP = PickupCP;
-        statusP = statusCP;
-        phoneT = document.getElementById('phoneT').value;
-        emailT = document.getElementById('emailT').value;
-        statusT = document.getElementById('statusT').value;
-        passT = document.getElementById('passT').value;
-        passTC = document.getElementById('passTC').value;
-        if(passT == passTC && !passT == '')
-        {
-                if(nyProfile == false)
-                {
-                        pickupT = document.getElementById('pickupT').value;
-                        if(!brukerNavnT == '')
-                        { 
-                            showProPage();
-                        }
-                        else 
-                        {
-                                mainContentDiv.innerHTML = `
-  
-   
-                                <div class="backtop"></div>        
-                                <div class="backheadpassreq">   Profile    </div>
-                                <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
-                                <div onclick="showMenu()" class="backbutton"></div></a>
-                                       
-                                   <div class="lele2"><h2></h2></div>    
-                                   <div class="backgroundkaos"></div>      
-                                   <div class="profileBilde"></div>
-                                   <div class="ProfileBoks">  
-                            
-                                           <div id="Navn" class="profileNavn">Houng Dajin</div>
-                                           <div class="profile1">Phone Number<br><div id="nummer" class="profileInfo">` + phoneT + `</div></div>
-                                           <div class="profile2">Email <br><div id="mail" class="profileInfo">` + emailT + `</div></div>
-                                           <div class="profile3">Pick up Point <br><div id="point" class="profileInfo">` + pickupT + `</div></div>
-                                           <div class="profile4">Driver Status<br><div id="status" class="profileInfo">` + statusT + `</div></div>
-                                           <div class="profile5" onclick="profileEdit()">Edit Profile</div>
-                                   
-                                   </div>`;
-                        }
-                }
-                if(nyProfile == true)
-                {
-                        brukerNavnT = document.getElementById('brukerNavn').value;
-                        if(!brukerNavnT == '')
-                        {
-                                showMenu();
-                        }
-                        else
-                        {
-                                document.getElementById('feilsokk').innerHTML = '<font color="red">Fyll ut brukernavnet også!</font>';    
-                        }
-        
-                }
-        }
-        else if(passT == '')
-        {
-                document.getElementById('feilsokk').innerHTML = '<font color="red">Fyll ut passord-feltene!</font>';
-        }
-        else
-        {
-                document.getElementById('feilsokk').innerHTML = '<font color="red">Passordene er forskjellige!</font>'; 
-        }
-
 }
