@@ -1,3 +1,4 @@
+
 function dologInCheck() {
     var username = document.getElementById('usernameTxt').value;
     var password = document.getElementById('passwordTxt').value;
@@ -9,9 +10,9 @@ function dologInCheck() {
     else {
         document.getElementById('wrongpass').innerHTML =
             'Wrong Username or password!';
-        document.getElementById('usernameTxt').style.boxShadow = 
+        document.getElementById('usernameTxt').style.boxShadow =
             '0 0 20px red';
-        document.getElementById('passwordTxt').style.boxShadow = 
+        document.getElementById('passwordTxt').style.boxShadow =
             '0 0 20px red';
     }
 }
