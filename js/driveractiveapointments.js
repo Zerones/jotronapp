@@ -34,4 +34,4 @@
             `;
     }
     mainContentDiv.innerHTML += '</div></div>';
-         
+    }
