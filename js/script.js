@@ -1,5 +1,4 @@
-
-function doLoginCheck() {
+function dologInCheck() {
     var username = document.getElementById('usernameTxt').value;
     var password = document.getElementById('passwordTxt').value;
     var loginSuccess = false;
@@ -112,4 +111,3 @@ var users =
         },
 
     ];
-
