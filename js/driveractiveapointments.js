@@ -32,6 +32,6 @@
                         <div class="sjaforforAvlys1">Cancel</div>
                     </div>
             `;
-   
+    }
     mainContentDiv.innerHTML += '</div></div>';
-         }
+         
