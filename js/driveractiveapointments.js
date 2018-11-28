@@ -1,4 +1,4 @@
-<script>
+
     function ShowDriverAppointments() {
     var trip = {
         passengers: [1, 3, 4]
@@ -35,4 +35,3 @@
     }
     mainContentDiv.innerHTML += '</div></div>';
 }
-</script>
