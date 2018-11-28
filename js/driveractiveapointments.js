@@ -29,7 +29,7 @@
                         <h1 class="sjaforfortest123">${name}</h1>
                         <p class="sjaforfortlfnumber1">${mobile}</p>
                         <p id="sjaforforavstand1">Distance: </p>
-                        <div id="sjaforforgooglemaps1"><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB">Google Maps</a></div>
+                        <div id="sjaforforgooglemaps1"><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/" target="_blank">Google Maps</a></div>
                         <div class="sjaforforAvlys1">Cancel</div>
                     </div>
             `;
