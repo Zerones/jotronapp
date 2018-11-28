@@ -19,10 +19,6 @@ function showDriver() {
     <div class="weekback2"></div>
     <div class="weeknext2"></div>
 
-    <div class="color11"><b class="color12">Red</b> = Cancelled appointments</div>
-    <div class="color11"><b class="color18">green</b> = Active appointment</div>
-    <button class="finddriver13" onclick="passenger()">Find passenger</button>
-    
 
  `;
 }
