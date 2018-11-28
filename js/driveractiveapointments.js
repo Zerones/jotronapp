@@ -1,6 +1,6 @@
     function ShowDriverAppointments() {
     var trip = {
-        passengers: [1, 3, 4]
+        passengers: [0, 3, 4]
     };
 
     var mainContentDiv = document.getElementById('mainContent');
