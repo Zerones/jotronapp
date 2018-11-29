@@ -9,8 +9,8 @@ function showTheHistory() {
 
     <div class="backheadtext">History</div>
 
-    <button class="m3" onclick="showTopcontributors()">Top Contributors</button>
-    <button class="m2" onclick="driverHistory()">Driver</button>
+    <button class="m2" onclick="showTopcontributors()">Top Contributors</button>
+    <button class="m3" onclick="driverHistory()">Driver</button>
     <button class="m3" onclick="passengerHistory()">Passenger</button>
     
 
