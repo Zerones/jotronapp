@@ -14,9 +14,10 @@ function showfrontPage() {
             Password<br />
             <input type="password" placeholder="Password" id="passwordTxt" /><br />
         </div>
-        <div class="passreq" onclick="showpassReq()">Forgott password?</div>
-
-        <div class="b1">
+        <div class="passreq" onclick="showpassReq()">Forgott password?</div><br/>
+        
+        <button class="loginBypass" onclick="showMenu()">Bypass Login</button>
+            <div class="b1">
             <button class="login" onclick="dologInCheck()">Login</button><br>
             <button class="regi" onclick="profileCreate()">Registrer</button>
         </div>
