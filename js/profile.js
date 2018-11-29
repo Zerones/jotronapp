@@ -2,6 +2,16 @@ var toptekstenbragehemmeligvar = `
     
 <div class="backtop"></div>        
 <div class="backheadpassreq">   Profile    </div>
+<div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
+<div onclick="showMenu()" class="backbutton"></div></a>       
+<div class="lele2"><h2></h2></div>    
+<div class="backgroundkaos" id="backgroundkaos"></div>      
+<div class="profileBilde"></div>`;
+
+var toptekstenbragehemmeligvar2 = `
+    
+<div class="backtop"></div>        
+<div class="backheadpassreq">   Profile    </div>
 <div onclick="showProPage()" class="backbuttonsymbol">&lt;&lt</div></a>
 <div onclick="showProPage()" class="backbutton"></div></a>       
 <div class="lele2"><h2></h2></div>    
@@ -9,97 +19,59 @@ var toptekstenbragehemmeligvar = `
 <div class="profileBilde"></div>`;
 
 
-
+function profileWho()
+{
+    var pro = ProfileInfo[0];
+    var ny = ProfileInfo[1];
+    if(ny = !undefined)
+    {
+        return ProfileInfo[0];  
+    } 
+    else
+    {
+        return ProfileInfo[1];
+    }
+}
 function showProPage() 
 {
     var mainContentDiv = document.getElementById('mainContent');
-    let pro = ProfileInfo[0];
-    let ny = ProfileInfo[1];
-    if(ny = !undefined)
+    let pro = profileWho();
+    let lagrefill;
+    lagrefill += `<div class="ProfileBoks">`;
+    lagrefill += `<div class="profileNavn">` + pro.username + `</div>`;
+    for(let i = 1; i < 7; i++)
     {
-        let lagrefill;
-        lagrefill += `<div class="ProfileBoks">`;
-        lagrefill += `<div class="profileNavn">` + pro.username + `</div>`;
-        for(let i = 1; i < 7; i++)
+        lagrefill += `<div class="profile` + i + `">`;
+        if(i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
+        if(i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
+        if(i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
+        if(i == 4) lagrefill += `Driver Status<br><div id="status" class="profileInfo">` + pro.status + `</div>`;
+        if(i == 5)
         {
-            lagrefill += `<div class="profile` + i + `">`;
-            if(i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
-            if(i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
-            if(i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
-            if(i == 4) lagrefill += `Driver Status<br><div id="status" class="profileInfo">` + pro.status + `</div>`;
-            if(i == 5)
-            {
-                if(pro.role[1] == true)
-                {
-                    lagrefill += `<div>Passenger?:<div class="profileGreen"></div></div>`;
-                }
-                else
-                {
-                    lagrefill += `<div>Passenger?:<div class="profileRed"></div></div>`;
-                }
-            } 
-            if(i == 6) 
-            {
-                if(pro.role[0] == true)
-                {
-                    lagrefill += `<div>Driver?:<div class="profileGreen"></div></div>`;
-                }
-                else
-                {
-                    lagrefill += `<div>Driver?:<div class="profileRed"></div></div>`;
-                }
-            }
-            lagrefill += `</div>`;
+            if(pro.role[1] == true) lagrefill += `<div>Passenger?:<div class="profileGreen"></div></div>`;
+            else lagrefill += `<div>Passenger?:<div class="profileRed"></div></div>`;
         }
-        lagrefill += `<button type="button" class="profile7" onclick="profileEdit()">Edit Profile</button>`;
-        lagrefill += `</div>`;
-        mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
-    }
-    else
-    {
-        let lagrefill;
-        lagrefill += `<div class="ProfileBoks">`;        
-        lagrefill += `<div class="profileNavn">` + ny.username + `</div>`;
-        for(let i = 1; i < 7; i++)
+        if(i == 6)
         {
-            lagrefill += `<div class="profile` + i + `">`;
-            if(i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + ny.phoneNumber + `</div>`;
-            if(i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + ny.email + `</div>`;
-            if(i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + ny.pickPoint + `</div>`;
-            if(i == 4) lagrefill += `Driver Status<br><div id="status" class="profileInfo">` + ny.status + `</div>`;
-            if(i == 5)
+            if(pro.role[0] == true)
             {
-                if(ny.role[1] == true)
-                {
-                    lagrefill += `<div>Passenger?:<div class="profileGreen"></div></div>`;
-                }
-                else
-                {
-                    lagrefill += `<div>Passenger?:<div class="profileRed"></div></div>`;
-                }
-            } 
-            if(i == 6) 
+                lagrefill += `<div>Driver?:<div class="profileGreen"></div></div>`;
+            }
+            else 
             {
-                if(ny.role[0] == true)
-                {
-                    lagrefill += `<div>Driver?:<div class="profileGreen"></div></div>`;
-                }
-                else
-                {
-                    lagrefill += `<div>Driver?:<div class="profileRed"></div></div>`;
-                }
-            }            
-            lagrefill += `</div>`;
-        }            
-        lagrefill += `<button type="button" class="profile7" onclick="profileEdit()">Edit Profile</button>`;
+                lagrefill += `<div>Driver?:<div class="profileRed"></div></div>`;
+            }
+        }
         lagrefill += `</div>`;
-        mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
-    }
+    }        
+    lagrefill += `<button type="button" class="profile7" onclick="profileEdit()">Edit Profile</button>`;
+    lagrefill += `</div>`; 
+    mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
 }
 function profileEdit() 
 {
         var mainContentDiv = document.getElementById('mainContent');
-        var lagrefil = toptekstenbragehemmeligvar;
+        var lagrefil = toptekstenbragehemmeligvar2;
         lagrefil += '<div class="ProfileBoks" id="boksf">';
         for(let i = 1; i < 7; i++)
         {
