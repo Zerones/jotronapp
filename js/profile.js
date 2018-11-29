@@ -10,7 +10,7 @@ var toptekstenbragehemmeligvar = `
 var toptekstenbragehemmeligvar2 = `
     
 <div class="backtop"></div>        
-<div class="backheadpassreq">   Profile    </div>
+<div class="backheadtext">   Profile    </div>
 <div onclick="showProPage()" class="backbutton">&lt;&lt</div>       
 <div class="lele2"><h2></h2></div>    
 <div class="backgroundkaos" id="backgroundkaos"></div>      
