@@ -240,7 +240,7 @@ div.wrapacc {
     margin-top: 4vh;
     font-size: 17px;
 }
-input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pickupTxt, #passwordrepreTxt {
+input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pickupTxt, #passwordrepreTxt, #cityTxt {
     color: black;
     padding: 5px 10px;
     border-radius: 7px;
