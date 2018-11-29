@@ -76,7 +76,6 @@ textarea:focus, input:focus, button:focus {
     margin-top: 20px;
     position: center;
     min-width: 290px;
-
 }
 
 .loginbox {
@@ -223,7 +222,7 @@ div.backtop {
 
 div.backbutton {
     background-color: white;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 3px black;
     width: 40px;
     height: 40px;
     position: absolute;
@@ -238,8 +237,16 @@ div.backbutton {
     color: darkorange;
     font-weight: bold;
     font-size: 32px;
+    text-shadow: 0 0 2px black;
     letter-spacing: -3px;
     user-select: none;
+}
+
+.backbutton:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
 }
 
 div.backheadtext {
@@ -313,6 +320,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
     top: 1%;
     min-width: 200px;
     text-shadow: 0 0 2px black;
+    text-decoration: underline;
 }
 
 .m2 {
@@ -441,6 +449,7 @@ div.weekback {
     padding-bottom: 10px;
     border-radius: 7px;
     cursor: pointer;
+    text-shadow: 0 0 2px black;
 }
 
 div.weeknext {
@@ -457,12 +466,27 @@ div.weeknext {
     height: 40px;
     z-index: 2;
     border: groove 2px black;
-    padding-left: 15px;
-    padding-right: 10px;
+    padding-left: 13px;
+    padding-right: 12px;
     padding-top: 6px;
     padding-bottom: 10px;
     border-radius: 7px;
     cursor: pointer;
+    text-shadow: 0 0 2px black;
+}
+
+.weeknext:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.weekback:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
 }
 
 .lele {
@@ -933,7 +957,6 @@ div.weeknext {
     display: block;
     position: relative;
     border-radius: 7px;
-    
 }
 
 #dates {
@@ -950,10 +973,10 @@ div.weeknext {
     width: 72px;
     z-index: 1;
 }
+
 #day {
     background-color: #313131;
     height: 7px;
-    
     margin-left: 2rem;
     position: absolute;
     z-index: 1;
@@ -974,19 +997,19 @@ div.weeknext {
     z-index: 1;
 }
 
-div.sjaforformaindiv{
+div.sjaforformaindiv {
     padding-top: 4vh;
     font-size: 36px;
     margin: auto;
     position: center;
     margin-top: 9vh;
 }
-div.sjaforforcontainer{
+
+div.sjaforforcontainer {
     padding-left: 1vw;
     padding-right: 1vw;
-    
-    
 }
+
 #sjaforfor1, #sjaforfor2 {
     border: groove 5px black;
     padding-bottom: 10vh;
@@ -997,22 +1020,26 @@ div.sjaforforcontainer{
     box-shadow: 0 0 5px black;
     z-index: 1;
 }
+
 h1.sjaforfortest123, .sjaforfornavn2 {
     font-size: 4vh;
     color: black;
     z-index: 2;
 }
+
 p.sjaforfortlfnumber1, .sjaforfortlfnumber2 {
     font-size: 3vh;
     margin-top: -20px;
     color: black;
     z-index: 2;
 }
-#sjaforforavstand1, #sjaforforavstand2{
+
+#sjaforforavstand1, #sjaforforavstand2 {
     font-size: 3vh;
     margin-bottom: 10vh;
     color: black;
 }
+
 #sjaforforgooglemaps1, #sjaforforgooglemaps2 {
     background-color: white;
     font-size: 4vh;
@@ -1029,6 +1056,7 @@ p.sjaforfortlfnumber1, .sjaforfortlfnumber2 {
     z-index: 2;
     display: inline-block;
 }
+
 .sjaforforAvlys1, .sjaforforAvlys2 {
     border: groove 2px white;
     border-radius: 7px;
@@ -1043,13 +1071,20 @@ p.sjaforfortlfnumber1, .sjaforfortlfnumber2 {
     text-align: center;
     margin-right: 1vw;
     margin-left: 1vw;
-    
 }
+
 .googlelink {
     color: darkorange;
     text-decoration: underline;
-    display: inline-block;
+    font-size: 36px;
+    text-shadow: 0 0 1px black;
+    margin-bottom: 10vh;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
 }
+
 img.portrett1 {
     height: 100%;
 }
