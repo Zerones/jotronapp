@@ -1,4 +1,4 @@
-function showRegestrirngPage() {
+function showregPage() {
     var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
     
