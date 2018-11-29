@@ -9,6 +9,18 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+.loginBypass {
+    border: groove black 2px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    min-width: 290px;
+    max-width: 20vw;
+    margin-top: 1vh;
+}
 textarea:focus, input:focus, button:focus {
     outline: none;
 }
