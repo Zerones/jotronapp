@@ -2,6 +2,16 @@ var toptekstenbragehemmeligvar = `
     
 <div class="backtop"></div>        
 <div class="backheadpassreq">   Profile    </div>
+<div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div></a>
+<div onclick="showMenu()" class="backbutton"></div></a>       
+<div class="lele2"><h2></h2></div>    
+<div class="backgroundkaos" id="backgroundkaos"></div>      
+<div class="profileBilde"></div>`;
+
+var toptekstenbragehemmeligvar2 = `
+    
+<div class="backtop"></div>        
+<div class="backheadpassreq">   Profile    </div>
 <div onclick="showProPage()" class="backbuttonsymbol">&lt;&lt</div></a>
 <div onclick="showProPage()" class="backbutton"></div></a>       
 <div class="lele2"><h2></h2></div>    
@@ -99,7 +109,7 @@ function showProPage()
 function profileEdit() 
 {
         var mainContentDiv = document.getElementById('mainContent');
-        var lagrefil = toptekstenbragehemmeligvar;
+        var lagrefil = toptekstenbragehemmeligvar2;
         lagrefil += '<div class="ProfileBoks" id="boksf">';
         for(let i = 1; i < 7; i++)
         {
