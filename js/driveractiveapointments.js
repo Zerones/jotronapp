@@ -7,14 +7,14 @@
 
     mainContentDiv.innerHTML = `
             <div class="backtop"></div>
-    <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div>
+            <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
             <a href="index.html"><div class="backbutton"></div></a>
             <div id="sjaforforheader">Active Passangers</div>
             <div class="sjaforforcontainer">
             <div class="sjaforformaindiv">
                 `;
 
-    var apps = pasanger.pasangers;
+    var apps = passenger.passengers;
 
     for (var i = 0; i < apps.length; i++) {
         var name = apps[i].name;
