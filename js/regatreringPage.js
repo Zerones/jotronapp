@@ -10,6 +10,7 @@ function showRegestrirngPage() {
     <a href="index.html"><div class="backbutton"></div></a>
 
     <div class="backheadaccmake">Account creation</div>
+    <div class="backheaddriverapp">Regester</div>
  
 
 
@@ -19,7 +20,8 @@ function showRegestrirngPage() {
         <input type="text" placeholder="Email" id="emailTxt" /><br />
         <input type="text" placeholder="password" id="passwordregTxt" /><br />
         <input type="text" placeholder="repeate password" id="passwordrepreTxt" /><br />
-        <input type="text" placeholder="Home address" id="homeadressTxt" /><br />
+        <input type="text" placeholder="Adress" id="homeadressTxt" /><br />
+        <input type="text" placeholder="City" id="cityTxt" /><br />
         <input type="text" placeholder="Telephone number" id="mobilTxt" /><br />
         <input type="text" placeholder="Wanted pick-up location" id="pickupTxt" /><br />
 
@@ -52,7 +54,7 @@ var regInfo =
             phoneNumber: '',
             homeAdress: '',
             pickPoint: '',
-
+            city: '',
             role: [false, false]
         }
     ];
@@ -65,6 +67,7 @@ function addNewUser() {
     newItem.repeatePassword = document.getElementById('passwordrepreTxt').value;
     newItem.phoneNumber = document.getElementById('mobilTxt').value;
     newItem.homeAdress = document.getElementById('homeadressTxt').value;
+    newItem.city = document.getElementById('cityTxt').value;
 
     newItem.pickPoint = document.getElementById('pickupTxt').value;
     regInfo.push(newItem);
@@ -77,10 +80,11 @@ function addNewUser() {
     var phoneNumber = document.getElementById('mobilTxt').value;
     var homeAdress = document.getElementById('homeadressTxt').value;
     var pickPoint = document.getElementById('pickupTxt').value;
-    
-    if (username == '' || email == '' || password == '' || repeatePassword == '' || phoneNumber == '' || homeAdress == '' || pickPoint == '') {
+    var city = document.getElementById('homeadressTxt').value;
+
+    if (username == '' || email == '' || password == '' || repeatePassword == '' || phoneNumber == '' || homeAdress == '' || pickPoint == '' || city == '') {
         document.getElementById('checkAll').innerHTML = 'fill in everything';
-     
+
     } else if (password !== repeatePassword) {
         document.getElementById('checkAll').innerHTML = 'The password is not the same';
     }
@@ -94,10 +98,10 @@ function addNewUser() {
       
         <button id="knappB" onclick="showfrontPage()" style="background-color:white">ok</button>
     </div>`;
-       
+
     }
-    
-    }
+
+}
 
 
 
