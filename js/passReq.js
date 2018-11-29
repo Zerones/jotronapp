@@ -2,11 +2,12 @@ function showpassReq() {
     var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = ` 
 
-    <div class="backheadpassreq">Password recovery</div>
+    
     <div class="backtop"></div>
+    <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
 
-    <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-    <a href="index.html"><div class="backbutton"></div></a>
+    <div class="backheadtext">PassReq</div>
+    
 
 
     <div class="passreqfieldbox">

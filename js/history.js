@@ -4,14 +4,14 @@ function showTheHistory() {
     mainContentDiv.innerHTML = `
 
     <div class="backtop"></div>
-    <div onclick="showMenu()" class="backbuttonsymbol">&lt;&lt</div>
-    <div onclick="showMenu()" class="backbutton"></div>
+    
+    <div onclick="showMenu()" class="backbutton">&lt;&lt</div>
 
-    <div class="backheaddriverapp">History</div>
+    <div class="backheadtext">History</div>
 
-    <button class="driverHistory" onclick="driverHistory()">Driver</button>
-    <button class="PassengerHistory" onclick="passengerHistory()">Passenger</button>
-    <button class="ContributorsHistory" onclick="showTopcontributors()">Top Contributors</button>
+    <button class="m2" onclick="driverHistory()">Driver</button>
+    <button class="m3" onclick="passengerHistory()">Passenger</button>
+    <button class="m4" onclick="showTopcontributors()">Top Contributors</button>
 
 `;
 }

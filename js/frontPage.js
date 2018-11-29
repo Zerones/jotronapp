@@ -16,10 +16,11 @@ function showfrontPage() {
         </div>
         <div class="passreq" onclick="showpassReq()">Forgott password?</div><br/>
         
-        <button class="loginBypass" onclick="showMenu()">Bypass Login</button>
+        
             <div class="b1">
             <button class="login" onclick="dologInCheck()">Login</button><br>
               <button class="regi" onclick="showRegestrirngPage()">Registrer</button>
+                <button class="loginBypass" onclick="showMenu()">Bypass Login<br/><b class="cons">(Will be removed)</b></button>
         </div>
    
     <div class="userinfo" onclick="showInfoPage()">Privacy and Terms of Use</div>

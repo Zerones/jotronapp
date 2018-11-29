@@ -2,15 +2,11 @@ function showInfo() {
     var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 
-    <div class="backtop"> </div>
-        <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-        <a href="index.html"><div class="backbutton"></div></a>
-        <link rel="stylesheet" type="text/css" href="css.css">
+     <div class="backtop"></div>
+     <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
 
-        <div class="backheadpassreq">   Info    </div>
-        <div class="backtop"></div>
-        <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-        <a href="index.html"><div class="backbutton"></div></a>
+        <div class="backheadtext">   Info    </div>
+
 
    
 

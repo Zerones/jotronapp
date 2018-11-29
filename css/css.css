@@ -9,17 +9,21 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+.cons {
+    font-size: 24px; 
+}
 .loginBypass {
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
     text-align: center;
     min-width: 290px;
     max-width: 20vw;
-    margin-top: 1vh;
+    margin-top: 20px;
 }
 textarea:focus, input:focus, button:focus {
     outline: none;
@@ -30,7 +34,7 @@ textarea:focus, input:focus, button:focus {
     text-align: center;
     margin: auto;
     position: absolute center;
-    margin-top: 10vh;
+    margin-top: 20px;
     min-width: 290px;
     max-width: 20vw;
 
@@ -48,40 +52,40 @@ textarea:focus, input:focus, button:focus {
 .login {
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
     text-align: center;
-    position: absolute center;
+    position: center;
     min-width: 290px;
     max-width: 20vw;
 }
 .regi {
     background-color: white;
     border: groove black 2px;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
     text-align: center;
     margin-top: 20px;
-    position: absolute center;
+    position: center;
     min-width: 290px;
     max-width: 20vw;
 }
 .loginbox {
-    position: absolute center;
+    position: center;
     margin: auto;
     right: 10px;
     font-size: 26px;
-    margin-top: 10vh;
+    margin-top: 5vh;
     color: white;
 
 }
 input#usernameTxt {
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: groove black 2px;
     box-shadow: 0 0 5px black;
     margin-top: 5px;
@@ -89,7 +93,7 @@ input#usernameTxt {
 }
 input#passwordTxt {
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: groove black 2px;
     box-shadow: 0 0 5px black;
     margin-top: 5px;
@@ -162,7 +166,7 @@ button:hover {
 .preqfiledsub {
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -182,7 +186,7 @@ button:hover {
 }
 input#passreqfield {
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: groove black 2px;
     box-shadow: 0 0 5px black;
     margin-top: 5px;
@@ -195,107 +199,51 @@ div.backtop {
     width: 100%;
     height: 80px;
     border-bottom: groove 3px black;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 15px black;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
-
 div.backbutton {
     background-color: white;
     box-shadow: 0 0 5px black;
     width: 40px;
-    height: 50px;
+    height: 40px;
     position: absolute;
-    z-index: 2;
-    top: 15px;
-    left: 5px;
-    border: groove 2px black;
-    border-radius: 20%;
-}
-
-div.backbuttonsymbol {
-    position: absolute;
-    z-index: 3;
-    top: 24px;
+    top: 12px;
     left: 10px;
-    font-size: 32px;
+    z-index: 2;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 5px; 
+    border: groove 2px black;
+    border-radius: 7px;
     color: darkorange;
     font-weight: bold;
-    letter-spacing: -6px;
+    font-size: 32px;
+    letter-spacing: -3px;
     user-select: none;
 }
-
-div.backheadpassreq .backheadaccmake {
-    color: black;
-    font-size: 34px;
-    user-select: none;
-    font-family: 'Franklin Gothic Medium';
+div.backheadtext {
     position: absolute;
-    z-index: 2;
-    left: 10px;
-    right: 10px;
-    top: 3%;
-    min-width: 200px; 
-}
-div.dorp {
-    color: white;
+    top: 20px;
+    left: 20%;
+    right: 20%;
+    color: black;
     font-size: 34px;
-    margin-top: 30vh;
-    
-}
-#dorpbuttA {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 20px;
-    position: absolute center;
-    min-width: 170px;
-    max-width: 10vw;
-}
-#dorpbuttB {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 20px;
-    position: absolute center;
-    min-width: 170px;
-    max-width: 10vw;
-}
-#logoutbutt {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    margin-top: 40vh;
-    position: absolute center;
-    min-width: 300px;
-    max-width: 10vw;
-
+    font-family: 'Franklin Gothic Medium';
+    z-index: 2;
 }
 div.wrapacc {
     color: white;
-    margin-top: 5vh;
     position: absolute center;
-    margin-top: 15vh;
+    margin-top: 4vh;
     font-size: 17px;
 }
 input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pickupTxt, #passwordrepreTxt {
     color: black;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: groove black 2px;
     box-shadow: 0 0 5px black;
     margin: auto;
@@ -306,20 +254,9 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
 }
 .terms {
     font-size: 14px;
+    margin-bottom: 5px;
 }
-#regsub {
-    border: groove black 2px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 36px;
-    text-align: center;
-    position: absolute center;
-    min-width: 290px;
-    max-width: 20vw;
-    margin-top: 1vh;
-}
+
 .head1 {
     margin-bottom: 2vh;
     text-decoration: underline;
@@ -358,7 +295,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
 .m2 {
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -374,7 +311,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
     margin-left: 1vw;
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -389,7 +326,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
 .m4 {
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -405,7 +342,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
     margin-left: 1vw;
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -422,7 +359,7 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
     margin-top: 34vh;
     border: groove black 2px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 36px;
@@ -430,47 +367,16 @@ input#usernameregTxt, #emailTxt, #passwordregTxt, #homeadressTxt, #mobilTxt, #pi
     max-width: 20vw;
     cursor: pointer;
 }
-div.driverhead {
-    color: black;
-    font-size: 34px;
-    user-select: none;
-    font-family: 'Franklin Gothic Medium';
-    position: absolute;
-    z-index: 2;
-    left: 10px;
-    right: 10px;
-    top: 3%;
-    min-width: 200px;
-}
-.pickuplan {
-    margin-top: 10vh;
-    margin-bottom: 4vh;
-    color: white;
-    font-size: 32px;
-}
-div.backheaddriverapp {
-    color: black;
-    font-size: 34px;
-    user-select: none;
-    font-family: 'Franklin Gothic Medium';
-    position: absolute;
-    z-index: 2;
-    left: 22px;
-    right: 10px;
-    top: 3.5vh;
-    min-width: 200px;
-    
-}
 div.appointmentsh1 {
     color: white;
     font-family: 'Franklin Gothic Medium';
-    font-size: 34px;
-    margin-top: 14vh;
+    font-size: 38px;
+    margin-top: 13vh;
 }
 div.appointmentbox1, .appointmentbox2, .appointmentbox3, .appointmentbox4, .appointmentbox5 {
     background-color: white;
     border: groove black 2px;
-    border-radius: 10px;
+    border-radius: 7px;
     box-shadow: 0 0 5px black;
     color: black;
     font-size: 32px;
@@ -481,95 +387,56 @@ div.appointmentbox1, .appointmentbox2, .appointmentbox3, .appointmentbox4, .appo
     margin-right: 5vw;
     margin-top: 5px;
     cursor: pointer;
+    max-height: 100px;
+    min-height: 15px;
 }
 div.appointmentbox1 {
     margin-top: 14px;
-    background-color: lime;
+    background-color: white;
 }
 div.weekback {
-    position: absolute;
-    z-index: 3;
-    top: 520px;
-    left: 45px;
-    font-size: 32px;
+    position: fixed;
+    top: 83vh;
+    left: 10vw;
     color: darkorange;
     font-weight: bold;
-    letter-spacing: -6px;
-    user-select: none;
+    letter-spacing: -3px;
+    font-size: 38px;
+    background-color: white;
+    box-shadow: 0 0 5px black;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    border: groove 2px black;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 7px;
     cursor: pointer;
 }
 div.weeknext {
-    position: absolute;
-    z-index: 3;
-    top: 520px;
-    right: 50px;
-    font-size: 32px;
+    position: fixed;
+    top: 83vh;
+    right: 10vw;
     color: darkorange;
+    letter-spacing: -3px;
+    font-size: 38px;
     font-weight: bold;
-    letter-spacing: -6px;
-    user-select: none;
-    cursor: pointer;
-}
-div.weekback2 {
     background-color: white;
     box-shadow: 0 0 5px black;
     width: 40px;
-    height: 50px;
-    position: absolute;
+    height: 40px;
     z-index: 2;
-    top: 512px;
-    left: 40px;
     border: groove 2px black;
-    border-radius: 20%;
-    cursor: pointer;
-}
-div.weeknext2 {
-    background-color: white;
-    box-shadow: 0 0 5px black;
-    width: 40px;
-    height: 50px;
-    position: absolute;
-    z-index: 2;
-    top: 512px;
-    right: 40px;
-    border: groove 2px black;
-    border-radius: 20%;
-    cursor: pointer;
-}
-div.colorexp2 {
-    color: lime;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 14px;
-}
-div.colorexp {
-    margin-top: 10px;
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 14px;
-
-}
-button.finddriver {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 6px;
     padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 7vh;
-    min-width: 300px;
-
+    border-radius: 7px;
+    cursor: pointer;
 }
-b.bcolor {
-    color:lime;
-}
-
-.lele 
-{ 
+.lele {
     background-color: white;
     border: solid 1px grey;
     color: grey;
@@ -580,7 +447,7 @@ b.bcolor {
     margin-right: 20px;
     padding-top: 20px;
     margin-top: 20px;
-    border-radius: 5px; 
+    border-radius: 7px;
 }
 .lele2 
 { 
@@ -592,7 +459,183 @@ b.bcolor {
     margin-left: 0;
     width: 100%;
 }
+.backgroundkaos {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    left: 0px;
+    top: 200px;
+    z-index: -1;
+}
+.profileNavn {
+    grid-area: profileNavn;
+    font-size: 20px;
+    color: black;
+    padding: 5px 30px;
+    z-index: 1;
+}
 
+.profile1 {
+    grid-area: profile1;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profile2 {
+    grid-area: profile2;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profile3 {
+    grid-area: profile3;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profile4 {
+    grid-area: profile4;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profile5 {
+    grid-area: profile5;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profile6 {
+    grid-area: profile6;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+    margin-bottom: none;
+}
+
+.profile7 {
+    grid-area: profile7;
+    border: solid #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 90px;
+    margin-top: 30px;
+}
+
+.profilePass1 {
+    grid-area: profilePass1;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 30px;
+}
+
+.profilePass2 {
+    grid-area: profilePass2;
+    color: #B2B2B2;
+    border-style: none none solid none;
+    border-color: #707070;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: none;
+    padding: 5px 30px;
+}
+.ProfileBoks 
+{
+    max-height: 900px;
+    overflow-y:auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+                       'profileNavn profileNavn'
+                       'profile1 profile1'
+                       'profile2 profile2'
+                       'profile3 profile3'
+                       'profile4 profile4'
+                       'profile5 profile5'
+                       'profile6 profile6'
+                       'profile7 profile7';
+    padding-bottom: 40px;
+    background-color: none;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0; 
+    margin-bottom: auto;
+    margin-top: 0;
+    background-color: white;
+}
+.ProfileBoks > div 
+{
+    text-align: center;
+    background-color: none;
+    display: inline;
+}
+.profileInfo {
+    color: black;
+    display: inline;
+}
+.proedit {
+    grid-area: profile7;
+    border: groove white 2px;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 90px;
+    margin-top: 30px;
+    background-color: #002147;
+    border-radius: 7px;
+    box-shadow: 0 0 5px black;
+}
+    .profileBilde {
+    padding: 3px;
+    border-radius: 100%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    border: solid 1px #707070;
+    background-image: url("https://i.imgur.com/HPEyIPn.png");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+}
 .driver3 
 { 
     grid-area: bilde;
@@ -602,13 +645,12 @@ b.bcolor {
     border-color: none;
     padding-top: 20px;
     margin-top: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;            
     border: none;
 
 }
-.driver4
-{
+.driver4 {
     grid-area: main;
     background-color: white;
     margin-bottom: 10px;
@@ -616,155 +658,141 @@ b.bcolor {
     padding-top: 20px;
     margin-top: 20px;
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver5 
-{ 
+.driver5 {
     grid-area: bilde2;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver6
-{
+.driver6 {
     grid-area: main2;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
-    border-left: none; 
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-left: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver7 
-{ 
+.driver7 {
     grid-area: bilde3;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver8
-{
+.driver8 {
     grid-area: main3;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver9
-{ 
+.driver9 {
     grid-area: bilde4;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver10
-{
+.driver10 {
     grid-area: main4;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver11
-{ 
+.driver11 {
     grid-area: bilde5;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver12
-{
+.driver12 {
     grid-area: main5;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver13
-{ 
+.driver13 {
     grid-area: bilde6;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver14
-{
+.driver14 {
     grid-area: main6;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver15
-{ 
+.driver15 {
     grid-area: bilde7;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver16
-{
+.driver16 {
     grid-area: main7;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
-.driver17
-{ 
+.driver17 {
     grid-area: bilde8;
     background: white;
     margin-bottom: 10px;
     margin-left: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;            
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
     border: none;
 }
-.driver18
-{
+.driver18 {
     grid-area: main8;
     background-color: white;
     margin-bottom: 10px;
     margin-right: 20px;
     border: none;
     border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px; 
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 .driverboks 
 {
@@ -807,431 +835,7 @@ b.bcolor {
     max-width: 60px;
     align-content: center;
 }
-.request {
-    font-family: 'Franklin Gothic Medium';
-    font-size: 40px;
-    color: white;
-    background-color: #002147;
-    text-align: center;
-    height: 300px;
-    box-sizing: border-box;
-    margin-top: 150px;
-}
-#yesButton {
-    background-color: #FF0000;
-    border: none;
-    color: black;
-    padding: 25px 44px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 50px;
-    margin-top: 70px;
-    font-size: 35px;
-    margin-top: 50px;
-    cursor: pointer;
-}
 
-#NoButton {
-    background-color: #14B214;
-    border: none;
-    color: black;
-    padding: 25px 52px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 50px;
-}
-div.driverhead {
-    color: black;
-    font-size: 34px;
-    user-select: none;
-    font-family: 'Franklin Gothic Medium';
-    position: absolute;
-    z-index: 2;
-    left: 10px;
-    right: 10px;
-    top: 3%;
-    min-width: 200px;
-}
-
-.pickuplan {
-    margin-top: 10vh;
-    margin-bottom: 4vh;
-    color: white;
-    font-size: 32px;
-}
-div.backheaddriverapp14 {
-    color: black;
-    font-size: 34px;
-    user-select: none;
-    font-family: 'Franklin Gothic Medium';
-    position: absolute;
-    z-index: 2;
-    left: 22px;
-    right: 10px;
-    top: 3.5vh;
-    min-width: 200px;
-}
-div.d1 {
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 34px;
-    margin-top: 14vh;
-}
-div.d2, .d3, .d4, .d5, .d6 {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 5px;
-    cursor: pointer;
-}
-div.d2 {
-    margin-top: 14px;
-    background-color: lime;
-}
-div.d3 {
-    margin-top: 5px;
-    background-color: red;
-}
-div.color11 {
-    margin-top: 10px;
-    color: white;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 14px;
-}
-button.finddriver13 {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 5vh;
-    min-width: 300px;
-}
-div.backtop17 {
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    border-bottom: groove 3px black;
-    box-shadow: 0 0 10px black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    cursor: pointer;
-}
-div.backbutton15 {
-    background-color: white;
-    box-shadow: 0 0 5px black;
-    width: 40px;
-    height: 50px;
-    position: absolute;
-    z-index: 2;
-    top: 15px;
-    left: 5px;
-    border: groove 2px black;
-    border-radius: 20%;
-    cursor: pointer;
-}
-div.backbuttonsymbol16 {
-    position: absolute;
-    z-index: 3;
-    top: 24px;
-    left: 10px;
-    font-size: 32px;
-    color: darkorange;
-    font-weight: bold;
-    letter-spacing: -6px;
-    user-select: none;
-    cursor: pointer;
-}
-b.color12 {
-    color: red;
-}
-b.color18 {
-    color: lime;
-}
-#knappB 
-{
-        background-color: red;
-        border: groove black 2px;
-        border-radius: 10px;
-        box-shadow: 0 0 5px black;
-        color: black;
-        font-size: 32px;
-        text-align: center;
-        margin-top: 45vh;
-        min-width: 170px;
-        max-width: 10vw;
-}
-
-#historyWo {
-    color: white;
-    font-size: 25px;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    z-index: 1;
-    margin-top: 20px;
-}
-.history {
-    background-color: #00669B;
-    height: 60px;
-    padding-top: 15px; 
-}
-#icon {
-    float: left;
-    color: #FF8800;
-    height: 50px;
-    margin-left: 6px;
-    cursor: pointer;
-    display: block;
-}
-#History {
-    color: white;
-    font-size: 35px;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    z-index: 1;
-    margin-top: 20px;
-}
-#line {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-.driverHistory {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 20vh;
-    min-width: 300px;
-}
-.PassengerHistory {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 7vh;
-    min-width: 300px;
-}
-.ContributorsHistory {
-    background-color: white;
-    border: groove black 2px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px black;
-    color: black;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 7vh;
-    min-width: 300px;
-}
-.profileInfo
-{
-    color: black;
-    display: inline;
-}
-.profileBilde
-{
-    padding: 3px;
-    border-radius: 100%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    border: solid 1px #707070;
-    background-image: url("https://i.imgur.com/HPEyIPn.png");
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-position: center;
-    background-size:cover;
-    width: 200px;
-    height: 200px;
-    max-width: 100%; 
-    max-height: 100%;
-    z-index: 1;
-}
-.backgroundkaos
-{
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 550px;
-    left: 0px;
-    top: 200px;
-    z-index: -1;
-}
-.profileNavn
-{
-    grid-area: profileNavn;
-    font-size: 20px;
-    color: black;
-    padding: 5px 30px;
-    z-index: 1;
-}
- .profile1
-{
-    grid-area: profile1;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-}
-.profile2
-{
-    grid-area: profile2;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-}
-.profile3
-{
-    grid-area: profile3;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-}
-.profile4
-{
-    grid-area: profile4;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-}
-.profile5
-{
-    grid-area: profile5;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-
-}
-.profile6
-{
-    grid-area: profile6;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-    margin-bottom: none;
-}
-.profile7
-{
-    grid-area: profile7;
-    border: solid #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px 90px;
-    margin-top: 30px;
-
-}
-.profilePass1
-{
-    grid-area: profilePass1;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px 30px;
-
-}
-.profilePass2
-{
-    grid-area: profilePass2;
-    color: #B2B2B2;
-    border-style: none none solid none;
-    border-color: #707070;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: none;
-    padding: 5px 30px;
-}
-.ProfileBoks 
-{
-    max-height: 900px;
-    overflow-y:auto;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-areas:
-        'profileNavn profileNavn'
-        'profile1 profile1'
-        'profile2 profile2'
-        'profile3 profile3'
-        'profile4 profile4'
-        'profile5 profile5'
-        'profile6 profile6'
-        'profile7 profile7';
-    padding-bottom: 40px;
-    background-color: none;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    margin-right: 0; 
-    margin-bottom: auto;
-    margin-top: 0;
-    background-color: white;
- }
-.ProfileBoks > div 
-{
-    text-align: center;
-    background-color: none;
-    display: inline;
-}
 .backheadpassreq
 {
     color: black;
@@ -1521,20 +1125,6 @@ div.sjaforforAvlys1, .sjaforforAvlys2{
         div.drive-time {
                 padding-bottom: 2vh;         
         }
-
-div.backheadpassreq {
-            color: black;
-            font-size: 34px;
-            user-select: none;
-            font-family: 'Franklin Gothic Medium';
-            position: absolute;
-            z-index: 2;
-            left: 10px;
-            right: 10px;
-            top: 3%;
-            min-width: 200px;
-            margin-top: 1vh;
-        }
         p {
             font-size: 15px;
             margin-top: 15vh;
@@ -1594,6 +1184,7 @@ div.bildet1234 {
     overflow: hidden;
     margin-left: auto;
     margin-right: 5px;
+    margin-top: 10px;
 }
 
 div.img {

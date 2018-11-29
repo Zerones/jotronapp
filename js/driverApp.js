@@ -4,8 +4,7 @@ function driverApp() {
 
     <div class="backtop"></div>        
     <div class="backheadpassreq">   Driver    </div>
-    <div onclick="showPassengerAppointment()" class="backbuttonsymbol">&lt;&lt</div></a>
-    <div onclick="showPassengerAppointment()" class="backbutton"></div></a>       
+    <div onclick="showPassengerAppointment()" class="backbutton"></div>&lt;&lt</a>       
     <div class="lele2"><h2>Appointments:</h2></div>
     <div class="driverboks">       
 

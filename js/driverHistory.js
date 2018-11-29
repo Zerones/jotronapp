@@ -2,10 +2,10 @@ function driverHistory() {
     var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 <div class="backtop"></div>
-    <div onclick="showTheHistory()" class="backbuttonsymbol">&lt;&lt</div>
-    <div onclick="showTheHistory()" class="backbutton"></div>
+ 
+    <div onclick="showTheHistory()" class="backbutton">&lt;&lt</div>
 
-    <div class="backheaddriverapp">History</div>
+    <div class="backheadtext">History</div>
     <div id="passenger">Driver</div>
     <div id="firstpassenger">
         <div id="dates">22.12.2018</div>

@@ -5,13 +5,11 @@ function showRegestrirngPage() {
     
    
     <div class="backtop"></div>
+    <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
 
-    <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-    <a href="index.html"><div class="backbutton"></div></a>
+    <div class="backheadtext">Registration</div>
 
-    <div class="backheadaccmake">Account creation</div>
- 
-
+    <div class="appointmentsh1">Account creation</div>
 
     <div class="wrapacc">
         <div class="head1">Fill out the boxes below to register an account</div>
@@ -28,15 +26,15 @@ function showRegestrirngPage() {
         <div>Terms and conditions:</div>
 
         <div class="terms">
-            As a condition of use, when you use the services provided by this application you agree to the following:
-            When you are a passanger of another driver you will pay the driver 3,90 kr per km after each trip.
-            This application is only for employees of Jotron all rights reserved.
+            As a condition of use, when you use the services provided by this application you agree to the following:<br/>
+            When you are a passanger of another driver you will pay the driver 3,90 kr per km after each trip.<br/>
+            This application is only for employees of Jotron all rights reserved.<br/>
             etc etc etc
         </div>
     </div>
    <div id="checkAll" style="color:red"></div>
     <div>
-        <button onclick= "addNewUser()" type="submit" id="regsub">Save</button>
+        <button onclick="addNewUser()" class="login" type="submit" id="regsub">Submit</button>
     </div>
 
         `;

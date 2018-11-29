@@ -3,16 +3,14 @@ function passenger() {
     mainContentDiv.innerHTML = `
 
 
-<div class="backtop"></div>
-    <div class="backheadpassreq">   Passenger    </div>
-    <div onclick="showDriver()" class="backbuttonsymbol">&lt;&lt</div></a >
-        <div onclick="showDriver()" class="backbutton"></div></a >
-            <link rel="stylesheet" type="text/css" href="css.css">
+    <div class="backtop"></div>
+    <div onclick="showDriver()" class="backbutton">&lt;&lt</div>
 
-                <div class="m1"></div>
-                <div class="m11"></div>
-               
-            
+    <div class="backheadtext">Passenger</div>
+   
+        
+
+
     <legend>Choose Date and Time</legend>
                 <div>
                     <label for="drive-time">Date/time:</label>
