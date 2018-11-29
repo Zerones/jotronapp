@@ -19,7 +19,7 @@ function showfrontPage() {
         <button class="loginBypass" onclick="showMenu()">Bypass Login</button>
             <div class="b1">
             <button class="login" onclick="dologInCheck()">Login</button><br>
-            <button class="regi" onclick="profileCreate()">Registrer</button>
+              <button class="regi" onclick="showRegestrirngPage()">Registrer</button>
         </div>
    
     <div class="userinfo" onclick="showInfoPage()">Privacy and Terms of Use</div>
