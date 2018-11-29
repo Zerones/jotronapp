@@ -7,9 +7,9 @@
 
     mainContentDiv.innerHTML = `
             <div class="backtop"></div>
-            <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-            <a href="index.html"><div class="backbutton"></div></a>
-            <div id="sjaforforheader">Active Passangers</div>
+            
+            <div onclick="showDriver()" class="backbutton">&lt;&lt</div>
+            <div class="backheadtext">Passangers</div>
             <div class="sjaforforcontainer">
             <div class="sjaforformaindiv">
                 `;
@@ -29,8 +29,10 @@
                         <h1 class="sjaforfortest123">${name}</h1>
                         <p class="sjaforfortlfnumber1">${mobile}</p>
                         <p id="sjaforforavstand1">Distance: </p>
-                        <div id="sjaforforgooglemaps1"><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/" target="_blank">Google Maps</a></div>
-                        <div class="sjaforforAvlys1">Cancel</div>
+                      <div id="sjaforforgooglemaps1><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/"
+                         target="_blank"><div class="googlelink">Google Maps</div></a>
+                      </div>
+                         <button class="sjaforforAvlys1">Cancel</button>
                     </div>
             `;
     }

@@ -3,8 +3,8 @@ function cancelYesNO() {
     mainContentDiv.innerHTML = `
 
     <div class="backtop"></div>
-    <a href="index.html"><div class="backbuttonsymbol">&lt;&lt</div></a>
-    <a href="index.html"><div class="backbutton"></div></a>
+    
+<div onclick="showMenu()" class="backbutton">&lt;&lt</div>
 
     <div class="sikker">Sure you want to cancel?</div>
     <div class="knapp">
