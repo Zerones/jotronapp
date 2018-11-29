@@ -26,17 +26,80 @@ function addProfile()
     allItems.push(newItem);
 }
 
-var pasanger = {
+var passenger = {
 
-    pasangers: [
-        { name: 'Magnus Viken', city: 'Sande', gatenavn: 'kaiveien', husnr: '8', mobile: '22470519'},
-        { name: 'Gunnvor Espenson', address: 'Nanset Gata 32', city: 'Sande', mobile: '79416663' },
-        { name: 'Elias Jacobsen', address: 'Hagalia 32', city: 'Larvik', mobile: '52212504'  },
-        { name: 'Monika Isaksen', address: 'Torget 10', city: 'Larvik', mobile: '90967881'  },
-        { name: 'Tom .J. Bain', address: 'Haslegaten 21', city: 'Sandefjord', mobile: '39318340'  },
-        { name: 'Tommy Johnson', address: 'Øvre Ohlssons Gate 23', city: 'Brevik', mobile: '54329199'  },
-        { name: 'Lorens Lund', address: 'Gate Mc. Gataface', city: 'Sande', mobile: '94716228'  },
-        { name: 'Jessica Johnsen', address: 'Drammen 10', city: 'Drammen', mobile: '73689189'  }
+    passengers: [
+        {name: 'Magnus Viken',
+        city: 'Tønsberg',
+        gatenavn: 'Kjellenveien',
+        husnr: '7',
+        mobile: '22 47 05 19',
+        username: 'Magnus',
+        password: '123'},
+
+        {name: 'Christian',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Christian',
+        password: '123'},
+
+        {name: 'Sebastian',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Sebastian',
+        password: '123'},
+
+        {name: 'Tom',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Tom',
+        password: '123'},
+
+        {name: 'Brage',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Brage',
+        password: '123'},
+
+        {name: 'Daniel',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Daniel',
+        password: '123'},
+
+        {name: 'Shafique',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Shafique',
+        password: '123'},
+
+        {name: 'Terje',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Terje',
+        password: '123'},
+
+        {name: 'Geir',
+        city: 'Sande',
+        gatenavn: 'kaiveien',
+        husnr: '8',
+        mobile: '22 47 05 19',
+        username: 'Geir',
+        password: '123'},
     ],
 
 };
