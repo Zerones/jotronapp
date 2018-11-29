@@ -23,8 +23,7 @@ function profileWho() {
     if (ny = !undefined) {
         return ProfileInfo[0];
     }
-    else 
-    {
+    else {
         return ProfileInfo[1];
     }
 }
