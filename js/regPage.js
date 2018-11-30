@@ -77,11 +77,11 @@ function addNewUser() {
         mainContentDiv.innerHTML = ` 
 
 
-    <div class="sikker" style="color:white">you are register now</div>
-    <div class="knapp">
+    <div class="sikker" style="color:white">You are now registered!</div>
+   
       
-        <button class="login" id="knappB" onclick="showfrontPage()" style="background-color:white">ok</button>
-    </div>`;
+        <button class="m22" onclick="showfrontPage()" style="background-color:white">ok</button>
+    `;
 
     }
 
