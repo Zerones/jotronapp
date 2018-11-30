@@ -68,6 +68,8 @@ function addNewUser() {
         newItem.repeatePassword = repeatePassword;
         newItem.phoneNumber = phoneNumber;
         newItem.homeAdress = homeAdress;
+        newItem.pickPoint = pickPoint;
+        newItem.role = [false, false];
         newItem.city = city;
 
         newItem.pickPoint = pickPoint.value;

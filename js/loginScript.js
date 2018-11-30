@@ -10,11 +10,12 @@ function dologInCheck() {
 
         if (users[i].username == username && users[i].password == password) {
             loginSuccess = true;
+            userID = i;
         }
     }
-    if (loginSuccess) {
+    if (loginSuccess) 
+    {
         showMenu();
-
     } else {
         document.getElementById('wrongpass').innerHTML = 'Wrong Username or password!';
         document.getElementById('usernameTxt').style.boxShadow = '0 0 20px red';

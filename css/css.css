@@ -1235,3 +1235,21 @@ div.sikker {
     width: 100%;
     text-align: center;
 }
+.profileGreen
+{
+    background-color: green;
+    float: right; 
+    margin-left: 5px;
+    border-radius: 50px;
+    border: lightgrey solid 2px;
+    padding: 7px;
+}
+.profileRed
+{
+    background-color: red;
+    padding: 7px;
+    border-radius: 50px;
+    float: right; 
+    margin-left: 5px;
+    border: lightgrey solid 2px;
+}
