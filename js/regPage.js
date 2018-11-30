@@ -80,7 +80,7 @@ function addNewUser() {
     <div class="sikker" style="color:white">you are register now</div>
     <div class="knapp">
       
-        <button id="knappB" onclick="showfrontPage()" style="background-color:white">ok</button>
+        <button class="login" id="knappB" onclick="showfrontPage()" style="background-color:white">ok</button>
     </div>`;
 
     }
