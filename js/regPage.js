@@ -40,34 +40,8 @@ function showregPage() {
 
         `;
 }
-var regInfo =
-    [
-
-        {
-            username: '',
-            email: '',
-            password: '',
-            repeatePassword: '',
-            phoneNumber: '',
-            homeAdress: '',
-            pickPoint: '',
-            city: '',
-            role: [false, false]
-        }
-    ];
-
 function addNewUser() {
-    var newItem = {};
-    newItem.username = document.getElementById('usernameregTxt').value;
-    newItem.email = document.getElementById('emailTxt').value;
-    newItem.password = document.getElementById('passwordregTxt').value;
-    newItem.repeatePassword = document.getElementById('passwordrepreTxt').value;
-    newItem.phoneNumber = document.getElementById('mobilTxt').value;
-    newItem.homeAdress = document.getElementById('homeadressTxt').value;
-    newItem.city = document.getElementById('cityTxt').value;
 
-    newItem.pickPoint = document.getElementById('pickupTxt').value;
-    regInfo.push(newItem);
 
 
     var username = document.getElementById('usernameregTxt').value;
@@ -77,7 +51,7 @@ function addNewUser() {
     var phoneNumber = document.getElementById('mobilTxt').value;
     var homeAdress = document.getElementById('homeadressTxt').value;
     var pickPoint = document.getElementById('pickupTxt').value;
-    var city = document.getElementById('homeadressTxt').value;
+    var city = document.getElementById('cityTxt').value;
 
     if (username == '' || email == '' || password == '' || repeatePassword == '' || phoneNumber == '' || homeAdress == '' || pickPoint == '' || city == '') {
         document.getElementById('checkAll').innerHTML = 'fill in everything';
@@ -86,6 +60,19 @@ function addNewUser() {
         document.getElementById('checkAll').innerHTML = 'The password is not the same';
     }
     else {
+
+        var newItem = {};
+        newItem.username = username;
+        newItem.email = email;
+        newItem.password = password;
+        newItem.repeatePassword = repeatePassword;
+        newItem.phoneNumber = phoneNumber;
+        newItem.homeAdress = homeAdress;
+        newItem.city = city;
+
+        newItem.pickPoint = pickPoint.value;
+        passenger.passengers.push(newItem);
+
         var mainContentDiv = document.getElementById('mainContent');
         mainContentDiv.innerHTML = ` 
 
