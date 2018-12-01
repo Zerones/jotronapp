@@ -1,4 +1,5 @@
-    function ShowDriverAppointments() {
+console.log    
+function ShowDriverAppointments() {
     var trip = {
         passengers: [0, 1, 4]
     };
