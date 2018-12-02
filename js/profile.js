@@ -36,20 +36,20 @@ function showProPage() {
     lagrefill += `<div class="profileNavn">` + pro.username + `</div>`;
     for (let i = 1; i < 7; i++) {
         lagrefill += `<div class="profile` + i + `">`;
-        if (i == 1) lagrefill += `Phone Number<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
-        if (i == 2) lagrefill += `Email <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
-        if (i == 3) lagrefill += `Pick up Point <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
+        if (i == 1) lagrefill += `Phone Number:<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
+        if (i == 2) lagrefill += `Email: <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
+        if (i == 3) lagrefill += `Pick up Point: <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
         if (i == 4) lagrefill += `Home Adress:<br><div id="status" class="profileInfo">` + pro.homeAdress + `</div>`;
         if (i == 5) {
-            if (pro.role[1] == true) lagrefill += `<div>Passenger?:<div class="profileGreen"></div></div>`;
-            else if(pro.role[1] == null || pro.role[1] == false) lagrefill += `<div>Passenger?:<div class="profileRed"></div></div>`;
+            if (pro.role[1] == true) lagrefill += `<div>Passenger:<div class="profileGreen"></div></div>`;
+            else if(pro.role[1] == null || pro.role[1] == false) lagrefill += `<div>Passenger:<div class="profileRed"></div></div>`;
         }
         if (i == 6) {
             if (pro.role[0] == true) {
-                lagrefill += `<div>Driver?:<div class="profileGreen"></div></div>`;
+                lagrefill += `<div>Driver:<div class="profileGreen"></div></div>`;
             }
             else if(pro.role[0] == null || pro.role[0] == false) {
-                lagrefill += `<div>Driver?:<div class="profileRed"></div></div>`;
+                lagrefill += `<div>Driver:<div class="profileRed"></div></div>`;
             }
         }
         lagrefill += `</div>`;
@@ -64,12 +64,12 @@ function profileEdit() {
     lagrefil += '<div class="ProfileBoks" id="boksf">';
     for (let i = 1; i < 7; i++) {
         lagrefil += '<div class="profile' + i + '">';
-        if (i == 1) lagrefil += `Phone Number<br><input type="text"  value="" id="phoneValue">`;
-        else if (i == 2) lagrefil += `Email <br><input type="text"  value="" id="emailValue">`;
-        else if (i == 3) lagrefil += `Pick up Point <br><input type="text"  value="" id="pickPointValue">`;
-        else if (i == 4) lagrefil += `Home Adress<br><input type="text"  value="" id="statusValue">`;
-        else if (i == 5) lagrefil += `Passenger?<input type="checkbox" id="passengerValue">`;
-        else if (i == 6) lagrefil += `Driver?:<input type="checkbox" id="driverValue">`;
+        if (i == 1) lagrefil += `Phone Number:<br><input type="text"  value="" id="phoneValue">`;
+        else if (i == 2) lagrefil += `Email: <br><input type="text"  value="" id="emailValue">`;
+        else if (i == 3) lagrefil += `Pick up Point: <br><input type="text"  value="" id="pickPointValue">`;
+        else if (i == 4) lagrefil += `Home Adress:<br><input type="text"  value="" id="statusValue">`;
+        else if (i == 5) lagrefil += `Passenger:<input type="checkbox" id="passengerValue">`;
+        else if (i == 6) lagrefil += `Driver:<input type="checkbox" id="driverValue">`;
         lagrefil += `<div class="profileInfo"></div>
                         </div>`;
     }
@@ -125,11 +125,11 @@ function saveProfile(element)
     }
     else if(password.value == '') 
     {
-        element.innerHTML = `<div style="color:red">Passwords feltet er tomt!</div>`;
+        element.innerHTML = `<div style="color:darkorange">Password field is empty!</div>`;
     }
     else
     {
-        element.innerHTML = `<div style="color:red">Passwords do not match!</div>`;
+        element.innerHTML = `<div style="color:darkorange">Passwords do not match!</div>`;
     }
 }
 function hoverman(element)

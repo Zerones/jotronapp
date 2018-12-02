@@ -8,12 +8,12 @@ function showfrontPage() {
 
         <img class="jotronlogo" src="img/Jotron_logo.jpg"><br>
         <div id=wrongpass></div>
-        <div class="loginbox">
+        <form class="loginbox">
             Username<br />
             <input type="text" placeholder="Username" id="usernameTxt" /><br />
             Password<br />
             <input type="password" placeholder="Password" id="passwordTxt" /><br />
-        </div>
+        </form>
         <div class="passreq" onclick="showpassReq()">Forgott password?</div><br/>
         
         

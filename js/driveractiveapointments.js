@@ -1,7 +1,7 @@
 console.log    
 function ShowDriverAppointments() {
     var trip = {
-        passengers: [0, 1, 4]
+        passengers: [0, 1, 2, 4]
     };
 
     var mainContentDiv = document.getElementById('mainContent');
@@ -19,7 +19,7 @@ function ShowDriverAppointments() {
 
     for (var i = 0; i < apps.length; i++) {
         var name = apps[i].name;
-        var mobile = apps[i].mobile;
+        var phoneNumber = apps[i].phoneNumber;
         var city = apps[i].city;
         var gatenavn = apps[i].gatenavn;
         var husnr = apps[i].husnr;
@@ -28,11 +28,11 @@ function ShowDriverAppointments() {
         mainContentDiv.innerHTML += `
                     <div id="sjaforfor1">
                         <h1 class="sjaforfortest123">${name}</h1>
-                        <p class="sjaforfortlfnumber1">${mobile}</p>
+                        <p class="sjaforfortlfnumber1">${phoneNumber}</p>
                         <p id="sjaforforavstand1">Distance: </p>
-                      <div id="sjaforforgooglemaps1><a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/"
+                      <a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/"
                          target="_blank"><div class="googlelink">Google Maps</div></a>
-                      </div>
+                      
                          <button class="sjaforforAvlys1">Cancel</button>
                     </div>
             `;

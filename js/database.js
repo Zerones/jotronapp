@@ -3,10 +3,10 @@ var ProfileInfo =
 [
     
     {
-        username: 'Kappa',
-        password: 'bla',
-        phoneNumberNumber: '1341',
-        email: '124',
+        username: 'Admin',
+        password: 'nimda',
+        phoneNumber: '12345678',
+        email: '123@jotron.com',
         pickPoint: '124',
         homeAdress: 'LARVIK',
         role: [false, false]
