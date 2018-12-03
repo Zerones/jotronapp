@@ -1,4 +1,7 @@
 var userID;
+var loggedInUser;
+var nomberTelUser;
+
 var ProfileInfo = 
 [
     

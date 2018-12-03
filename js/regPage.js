@@ -17,11 +17,11 @@ function showregPage() {
         <input type="text" placeholder="Email" id="emailTxt" /><br />
         <input type="text" placeholder="password" id="passwordregTxt" /><br />
         <input type="text" placeholder="repeate password" id="passwordrepreTxt" /><br />
-        <input type="text" placeholder="Adress" id="homeadressTxt" /><br />
+        <input type="text" placeholder="Streetname" id="streetNameTxt" /><br />
+        <input type="text" placeholder="House Number" id="homeadressTxt" /><br />
         <input type="text" placeholder="City" id="cityTxt" /><br />
         <input type="text" placeholder="Telephone number" id="mobilTxt" /><br />
-        <input type="text" placeholder="Wanted pick-up location" id="pickupTxt" /><br />
-
+    
         <a href="https://www.google.com/maps" id="googelmapreg"><div>Use google maps to get coordinates</div></a>
 
         <div>Terms and conditions:</div>
@@ -49,11 +49,12 @@ function addNewUser() {
     var password = document.getElementById('passwordregTxt').value;
     var repeatePassword = document.getElementById('passwordrepreTxt').value;
     var phoneNumber = document.getElementById('mobilTxt').value;
-    var homeAdress = document.getElementById('homeadressTxt').value;
-    var pickPoint = document.getElementById('pickupTxt').value;
+    var streetName = document.getElementById('streetNameTxt').value;
+    var houseNumber = document.getElementById('homeadressTxt').value;
+    //var pickPoint = document.getElementById('pickupTxt').value;
     var city = document.getElementById('cityTxt').value;
 
-    if (username == '' || email == '' || password == '' || repeatePassword == '' || phoneNumber == '' || homeAdress == '' || pickPoint == '' || city == '') {
+    if (username == '' || email == '' || password == '' || repeatePassword == '' || phoneNumber == '' || city == '' || streetName == '' || houseNumber == '' ) {
         document.getElementById('checkAll').innerHTML = 'fill in everything';
 
     } else if (password !== repeatePassword) {
@@ -67,12 +68,13 @@ function addNewUser() {
         newItem.password = password;
         newItem.repeatePassword = repeatePassword;
         newItem.phoneNumber = phoneNumber;
-        newItem.homeAdress = homeAdress;
-        newItem.pickPoint = pickPoint;
+        newItem.houseNumber = houseNumber;
+        newItem.streetName = streetName;
+        //newItem.pickPoint = pickPoint;
         newItem.role = [false, false];
         newItem.city = city;
 
-        newItem.pickPoint = pickPoint.value;
+        //newItem.pickPoint = pickPoint.value;
         passenger.passengers.push(newItem);
 
         var mainContentDiv = document.getElementById('mainContent');
@@ -88,5 +90,6 @@ function addNewUser() {
     }
 
 }
+
 
 

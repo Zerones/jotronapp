@@ -27,7 +27,7 @@ function ShowDriverAppointments() {
         if (!trip.passengers.includes(i)) continue;
         mainContentDiv.innerHTML += `
                     <div id="sjaforfor1">
-                        <h1 class="sjaforfortest123">${name}</h1>
+                        <h1 class="sjaforfortest123">${loggedInUser}</h1>
                         <p class="sjaforfortlfnumber1">${phoneNumber}</p>
                         <p id="sjaforforavstand1">Distance: </p>
                       <a href="https://www.google.no/maps?q=${city}+${gatenavn}+${husnr}&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc5duKmPfeAhWxmIsKHTYrBJsQ_AUIDigB/"

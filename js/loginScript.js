@@ -1,3 +1,9 @@
+
+function bypassLogin() {
+    loggedInUser = 'Testbruker';
+    nomberTelUser = 'nomber';
+    showMenu();
+}
 function dologInCheck() {
 
     var username = document.getElementById('usernameTxt').value;
@@ -16,6 +22,7 @@ function dologInCheck() {
     if (loginSuccess) 
     {
         showMenu();
+        loggedInUser = username;
     } else {
         document.getElementById('wrongpass').innerHTML = 'Wrong Username or password!';
         document.getElementById('usernameTxt').style.boxShadow = '0 0 20px red';
