@@ -1,4 +1,5 @@
 body {
+    margin: 0px;
     text-align: center;
     background-color: #002147;
     font-family: 'Franklin Gothic Medium';
@@ -1252,4 +1253,127 @@ div.sikker {
     float: right; 
     margin-left: 5px;
     border: lightgrey solid 2px;
+}
+.driver-request {
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+}
+
+.driver-container {
+    background-color: #002147;
+    width: 100vw;
+    height: 60vh;
+    border: solid 1px black;
+    position: absolute;
+}
+
+.driver-center-container {
+    border: solid 1px black;
+    background-color: white;
+    width: 99vw;
+    height: 125vh;
+    position: absolute;
+    top: 25vh;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 80%;
+    margin-left: 1px;
+}
+
+.driver-mapslink {
+    height: 10vh;
+    width: 86vw;
+    background-color: whitesmoke;
+    top: 32vh;
+    border: solid 2px black;
+    position: absolute;
+    border-radius: 15px;
+    margin-left: 5vw;
+    font-size: 200%;
+    padding-bottom: 4px;
+}
+
+.driver-wants-a-ride {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 35vh;
+    font-size: 250%;
+}
+
+.driver-accept {
+    height: 6vh;
+    width: 40vw;
+    background-color: #258825;
+    border: solid 1px black;
+    border-radius: 10px;
+    top: 105vh;
+    position: absolute;
+    margin-left: 5vw;
+    font-size: 200%;
+    padding-bottom: 4vh;
+}
+
+.driver-decline {
+    height: 6vh;
+    width: 40vw;
+    background-color: #882525;
+    border: solid 1px black;
+    border-radius: 10px;
+    top: 105vh;
+    position: absolute;
+    margin-left: 54vw;
+    font-size: 200%;
+    padding-bottom: 4vh;
+}
+
+.driver-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.driver-modal-content {
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%;
+    height: 30%;
+}
+
+.modal-driver-accept {
+    height: 6vh;
+    width: 30vw;
+    border: solid 1px black;
+    border-radius: 10px;
+    top: 30vh;
+    position: absolute;
+    font-size: 200%;
+    padding: 1vh;
+    padding-left: 2vh;
+    z-index: 1;
+    background-color: #258825;
+}
+
+.modal-driver-decline {
+    height: 6vh;
+    width: 27vw;
+    border: solid 1px black;
+    border-radius: 10px;
+    top: 30vh;
+    position: absolute;
+    font-size: 200%;
+    padding: 1vh;
+    padding-left: 5vh;
+    z-index: 1;
+    margin-left: 44vw;
+    background-color: #882525;
 }
