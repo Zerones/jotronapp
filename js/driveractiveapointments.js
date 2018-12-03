@@ -10,7 +10,7 @@ function ShowDriverAppointments() {
             <div class="backtop"></div>
             
             <div onclick="showDriver()" class="backbutton">&lt;&lt</div>
-            <div class="backheadtext">Passangers</div>
+            <div class="backheadtext">Passengers</div>
             <div class="sjaforforcontainer">
             <div class="sjaforformaindiv">
                 `;
