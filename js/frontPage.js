@@ -8,11 +8,11 @@ function showfrontPage() {
 
         <img class="jotronlogo" src="img/Jotron_logo.jpg"><br>
         <div id=wrongpass></div>
-        <form class="loginbox">
+        <form class="loginbox" method="post">
             Username<br />
-            <input type="text" placeholder="Username" id="usernameTxt" /><br />
+            <input type="text" placeholder="Username" id="usernameTxt" autocomplete="username"><br>
             Password<br />
-            <input type="password" placeholder="Password" id="passwordTxt" /><br />
+            <input type="password" placeholder="Password" id="passwordTxt" autocomplete="current-password"><br>
         </form>
         <div class="passreq" onclick="showpassReq()">Forgott password?</div><br/>
         
