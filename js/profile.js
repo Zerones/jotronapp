@@ -15,16 +15,19 @@ var toptekstenbragehemmeligvar2 = `
 <div class="lele2"><h2></h2></div>    
 <div class="backgroundkaos" id="backgroundkaos"></div>      
 <div class="profileBilde"></div>`;
-
+var profileAdressCombo;
 
 function profileWho() 
 {
     if(userID == null)
-    {
+    {        
+        profileAdressCombo = 'server room';
         return ProfileInfo[0];
     }
     else
-    {
+    {        
+        profileAdressCombo = passenger.passengers[userID].gatenavn + ' ' +
+        passenger.passengers[userID].husnr + ' ' + passenger.passengers[userID].city;
         return passenger.passengers[userID];
     }
 }
@@ -39,7 +42,7 @@ function showProPage() {
         if (i == 1) lagrefill += `Phone Number:<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
         if (i == 2) lagrefill += `Email: <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
         if (i == 3) lagrefill += `Pick up Point: <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
-        if (i == 4) lagrefill += `Home Adress:<br><div id="status" class="profileInfo">` + pro.homeAdress + `</div>`;
+        if (i == 4) lagrefill += `Home Adress:<br><div id="status" class="profileInfo">` + profileAdressCombo + `</div>`;
         if (i == 5) {
             if (pro.role[1] == true) lagrefill += `<div>Passenger:<div class="profileGreen"></div></div>`;
             else if(pro.role[1] == null || pro.role[1] == false) lagrefill += `<div>Passenger:<div class="profileRed"></div></div>`;
@@ -102,8 +105,8 @@ function saveProfile(element)
     let passenger = document.getElementById("passengerValue");
     let driver = document.getElementById("driverValue");
     let password = document.getElementById("passwordValue");
-    let passwordConfirm = document.getElementById("passwordValue");
-    if (password.value == passwordConfirm.value && !password.value == '' && !!passwordConfirm.value == '') 
+    let passwordConfirm = document.getElementById("passwordValueConfirm");
+    if (password.value == passwordConfirm.value && !password.value == '') 
     {
         document.getElementById("backgroundkaos").style.height = '550px';
         document.getElementById('boksf').style.gridTemplateAreas = `
@@ -127,9 +130,11 @@ function saveProfile(element)
     {
         element.innerHTML = `<div style="color:darkorange">Password field is empty!</div>`;
     }
-    else
+    else if(!password.value == passwordConfirm.value )
     {
         element.innerHTML = `<div style="color:darkorange">Passwords do not match!</div>`;
+        console.log(passwordConfirm.value);
+        console.log(password.value);
     }
 }
 function hoverman(element)

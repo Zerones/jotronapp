@@ -8,7 +8,7 @@ var ProfileInfo =
         phoneNumber: '12345678',
         email: '123@jotron.com',
         pickPoint: '124',
-        homeAdress: 'LARVIK',
+        gatenavn: 'LARVIK',
         role: [false, false]
     }
 ];
@@ -31,7 +31,7 @@ var passenger = {
     passengers: [
         {name: 'Magnus Viken',
         city: 'Tønsberg',
-        homeAdress: 'Kjellenveien',
+        gatenavn: 'Kjellenveien',
         husnr: '7',
         phoneNumber: '22 47 05 19',
         username: 'Magnus',
@@ -42,7 +42,7 @@ var passenger = {
 
         {name: 'Christian',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         phoneNumber: '22 47 05 19',
         username: 'Christian',
@@ -53,7 +53,7 @@ var passenger = {
 
         {name: 'Sebastian',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         phoneNumber: '22 47 05 19',
         username: 'Sebastian',
@@ -64,7 +64,7 @@ var passenger = {
 
         {name: 'Tom',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         phoneNumber: '22 47 05 19',
         username: 'Tom',
@@ -75,7 +75,7 @@ var passenger = {
 
         {name: 'Brage',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         phoneNumber: '22 47 05 19',
         username: 'Brage',
@@ -86,7 +86,7 @@ var passenger = {
 
         {name: 'Daniel',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         phoneNumber: '22 47 05 19',
         username: 'Daniel',
@@ -97,7 +97,7 @@ var passenger = {
 
         {name: 'Shafique',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         email: '124',
         pickPoint: '124',
@@ -108,7 +108,7 @@ var passenger = {
 
         {name: 'Terje',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         email: '124',
         pickPoint: '124',
@@ -119,7 +119,7 @@ var passenger = {
 
         {name: 'Geir',
         city: 'Sande',
-        homeAdress: 'kaiveien',
+        gatenavn: 'kaiveien',
         husnr: '8',
         email: '124',
         pickPoint: '124',
