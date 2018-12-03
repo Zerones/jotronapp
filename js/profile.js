@@ -71,7 +71,7 @@ function profileEdit() {
         else if (i == 2) lagrefil += `Email: <br><input type="text"  value="" id="emailValue">`;
         else if (i == 3) lagrefil += `Pick up Point: <br><input type="text"  value="" id="pickPointValue">`;
         else if (i == 4) lagrefil += `Home Adress:<br><input type="text"  value="" placeholder="Road" id="statusValue">
-        <input type="text"  value="" placeholder="Road Number" id="status2Value" maxlength="4" size="6"><input type="text"  value="" placeholder="City" id="status3Value" >`;
+        <input type="text"  value="" placeholder="Number" id="status2Value" maxlength="4" size="6"><input type="text"  value="" placeholder="City" id="status3Value" >`;
         else if (i == 5) lagrefil += `Passenger:<input type="checkbox" id="passengerValue">`;
         else if (i == 6) lagrefil += `Driver:<input type="checkbox" id="driverValue">`;
         lagrefil += `<div class="profileInfo"></div>
