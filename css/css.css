@@ -423,6 +423,13 @@ div.appointmentsh1 {
     font-size: 38px;
     margin-top: 13vh;
 }
+div.appointmentsh2 {
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 38px;
+    margin-top: 30vh;
+    text-decoration: underline;
+}
 
 div.appointmentbox1, .appointmentbox2, .appointmentbox3, .appointmentbox4, .appointmentbox5 {
     background-color: white;
