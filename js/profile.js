@@ -64,6 +64,11 @@ function showProPage() {
 function profileEdit() {
     var mainContentDiv = document.getElementById('mainContent');
     var lagrefil = toptekstenbragehemmeligvar2;
+    let pro = profileWho();
+    let toggle1 = '';
+    let toggle2 = '';
+    if(pro.role[1] == true) toggle1 = 'checked';
+    if(pro.role[0] == true) toggle2 = 'checked';
     lagrefil += '<div class="ProfileBoks" id="boksf">';
     for (let i = 1; i < 7; i++) {
         lagrefil += '<div class="profile' + i + '">';
@@ -72,8 +77,8 @@ function profileEdit() {
         else if (i == 3) lagrefil += `Pick up Point: <br><input type="text"  value="" id="pickPointValue">`;
         else if (i == 4) lagrefil += `Home Adress:<br><input type="text"  value="" placeholder="Road" id="statusValue">
         <input type="text"  value="" placeholder="Number" id="status2Value" maxlength="4" size="6"><input type="text"  value="" placeholder="City" id="status3Value" >`;
-        else if (i == 5) lagrefil += `Passenger:<input type="checkbox" id="passengerValue">`;
-        else if (i == 6) lagrefil += `Driver:<input type="checkbox" id="driverValue">`;
+        else if (i == 5) lagrefil += `Passenger:<input type="checkbox" ` + toggle1 + ` id="passengerValue">`;
+        else if (i == 6) lagrefil += `Driver:<input type="checkbox" ` + toggle2 + `  id="driverValue">`;
         lagrefil += `<div class="profileInfo"></div>
                         </div>`;
     }
@@ -127,8 +132,8 @@ function saveProfile(element)
         if(!gatenavn.value == '')pro.gatenavn = gatenavn.value;
         if(!roadNumber.value == '')pro.husnr = roadNumber.value;
         if(!city.value == '')pro.city = city.value;
-        pro.role[1] = passenger.checked;
-        pro.role[0] = driver.checked;
+        if(!pro.role[1] == passenger.checked)pro.role[1] = passenger.checked;
+        if(!pro.role[0] == driver.checked)pro.role[0] = driver.checked;
         showProPage();
     }
     else if(password.value == '') 
@@ -138,8 +143,6 @@ function saveProfile(element)
     else if(!password.value == passwordConfirm.value )
     {
         element.innerHTML = `<div style="color:darkorange">Passwords do not match!</div>`;
-        console.log(passwordConfirm.value);
-        console.log(password.value);
     }
 }
 function hoverman(element)
