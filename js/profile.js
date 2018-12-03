@@ -75,7 +75,7 @@ function profileEdit() {
     }
     lagrefil += `<div class="profilePass1" style="border:none">Password<br><input type="password" name="password" id="passwordValue"></div>
                  <div class="profilePass2" style="border:none">Password again<br><input type="password" name="password" id="passwordValueConfirm"></div>`;
-    lagrefil += `<button type="button" class="proedit" onclick="saveProfile(this)" onmouseout="hoverman(this)">Save Edits</button>`;
+    lagrefil += `<button type="button" class="proedit" onclick="saveProfile(this)" onmouseleave="hoverman(this)">Save Edits</button>`;
     lagrefil += '</div>';
     mainContentDiv.innerHTML = lagrefil;
     document.getElementById('boksf').style.gridTemplateAreas = `
@@ -103,7 +103,7 @@ function saveProfile(element)
     let driver = document.getElementById("driverValue");
     let password = document.getElementById("passwordValue");
     let passwordConfirm = document.getElementById("passwordValue");
-    if (password.value == passwordConfirm.value && !password.value == '') 
+    if (password.value == passwordConfirm.value && !password.value == '' && !!passwordConfirm.value == '') 
     {
         document.getElementById("backgroundkaos").style.height = '550px';
         document.getElementById('boksf').style.gridTemplateAreas = `
