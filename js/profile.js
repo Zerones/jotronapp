@@ -1,21 +1,12 @@
-var toptekstenbragehemmeligvar = `
-    
-<div class="backtop"></div>        
-<div class="backheadtext">   Profile    </div>
-<div onclick="showMenu()" class="backbutton">&lt;&lt</div>       
-<div class="lele2"><h2></h2></div>    
-<div class="backgroundkaos" id="backgroundkaos"></div>      
-<div class="profileBilde"></div>`;
 
-var toptekstenbragehemmeligvar2 = `
-    
-<div class="backtop"></div>        
-<div class="backheadtext">   Profile    </div>
-<div onclick="showProPage()" class="backbutton">&lt;&lt</div>       
+
+var pageID = ['',''];
+var profileAdressCombo;
+var headerProfile;
+var profileFill = `
 <div class="lele2"><h2></h2></div>    
 <div class="backgroundkaos" id="backgroundkaos"></div>      
 <div class="profileBilde"></div>`;
-var profileAdressCombo;
 
 function profileWho() 
 {
@@ -33,6 +24,13 @@ function profileWho()
 }
 function showProPage() {
     var mainContentDiv = document.getElementById('mainContent');
+    pageID[0] = 'Profile';
+    pageID[1] = 'showMenu()';
+    headerProfile = `
+        <div class="backtop"></div>        
+        <div class="backheadtext">` + pageID[0] + `</div>
+        <div onclick="` + pageID[1] + `" class="backbutton">&lt;&lt</div>       
+    `;
     let pro = profileWho();
     let lagrefill;
     lagrefill = `<div class="ProfileBoks">`;
@@ -59,11 +57,18 @@ function showProPage() {
     }
     lagrefill += `<button type="button" class="proedit" onclick="profileEdit()">Edit Profile</button>`;
     lagrefill += `</div>`;
-    mainContentDiv.innerHTML = toptekstenbragehemmeligvar + lagrefill;
+    mainContentDiv.innerHTML = headerProfile + profileFill + lagrefill;
 }
-function profileEdit() {
+function profileEdit() 
+{
+    pageID[1] = 'showProPage()';
+    headerProfile = `
+        <div class="backtop"></div>        
+        <div class="backheadtext">` + pageID[0] + `</div>
+        <div onclick="` + pageID[1] + `" class="backbutton">&lt;&lt</div>       
+    `;
     var mainContentDiv = document.getElementById('mainContent');
-    var lagrefil = toptekstenbragehemmeligvar2;
+    var lagrefil = headerProfile + profileFill;
     let pro = profileWho();
     let toggle1 = '';
     let toggle2 = '';
@@ -114,7 +119,7 @@ function saveProfile(element)
     let driver = document.getElementById("driverValue");
     let password = document.getElementById("passwordValue");
     let passwordConfirm = document.getElementById("passwordValueConfirm");
-    if (password.value == passwordConfirm.value && !password.value == '') 
+    if (password.value == passwordConfirm.value && !password.value == '' && password.value == pro.password) 
     {
         document.getElementById("backgroundkaos").style.height = '550px';
         document.getElementById('boksf').style.gridTemplateAreas = `
@@ -136,14 +141,9 @@ function saveProfile(element)
         if(!pro.role[0] == driver.checked)pro.role[0] = driver.checked;
         showProPage();
     }
-    else if(password.value == '') 
-    {
-        element.innerHTML = `<div style="color:darkorange">Password field is empty!</div>`;
-    }
-    else if(!password.value == passwordConfirm.value )
-    {
-        element.innerHTML = `<div style="color:darkorange">Passwords do not match!</div>`;
-    }
+    else if(password.value == '' || passwordConfirm.value == '') element.innerHTML = `<div style="color:darkorange">One or more password field are empty!</div>`;
+    else if(!password.value == passwordConfirm.value) element.innerHTML = `<div style="color:darkorange">Passwords do not match!</div>`;
+    else element.innerHTML = `<div style="color:darkorange">Wrong password!</div>`;
 }
 function hoverman(element)
 {
