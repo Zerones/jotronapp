@@ -8,7 +8,7 @@ function showPassengerAppointment() {
 
     <div class="appointmentsh1">Your<br>appointments</div>
 
-    <div class="appointmentbox1" onclick="checkAppointment(new Date(2018, 11, 10))">Monday</div>
+    <div class="appointmentbox1" onclick="checkAppointment()">Monday</div>
     <div class="appointmentbox2">Tuesday</div>
     <div class="appointmentbox3">Wednesday</div>
     <div class="appointmentbox4">Thursday</div>
@@ -25,7 +25,7 @@ function checkAppointment() {
     let showDate = date;
     var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `<h3 style= "color:white">you don't have appointments ${showDate.toLocaleString()} </h3>
-    <button onclick="selectDriverForAppointment(new Date(2018, 11, 10))">Click here to make appointment</button>`;
+    <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
 }
 function makeAppointment(dateNumber, driverId) {
     const date = new Date(dateNumber);
