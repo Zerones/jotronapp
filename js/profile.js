@@ -6,15 +6,16 @@ var profileFill = `
 
 function profileWho() 
 {
+    
     if(userID == null)
     {        
-        profileAdressCombo = 'server room';
-        return ProfileInfo[0];
+        profileAdressCombo = 'Logget in med admin bruker';
+        return passenger.passengers[0];
     }
     else
-    {        
+    {
         profileAdressCombo = passenger.passengers[userID].gatenavn + ' ' +
-        passenger.passengers[userID].husnr + ' ' + passenger.passengers[userID].city;
+        passenger.passengers[userID].husnr + ' ' + passenger.passengers[userID].city;        
         return passenger.passengers[userID];
     }
 }
@@ -25,21 +26,22 @@ function showProPage() {
     let lagrefill;
     lagrefill = `<div class="ProfileBoks">`;
     lagrefill += `<div class="profileNavn">` + pro.username + `</div>`;
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 7; i++) 
+    {
         lagrefill += `<div class="profile` + i + `">`;
         if (i == 1) lagrefill += `Phone Number:<br><div id="nummer" class="profileInfo">` + pro.phoneNumber + `</div>`;
         if (i == 2) lagrefill += `Email: <br><div id="mail" class="profileInfo">` + pro.email + `</div>`;
         if (i == 3) lagrefill += `Pick up Point: <br><div id="point" class="profileInfo">` + pro.pickPoint + `</div>`;
         if (i == 4) lagrefill += `Home Adress:<br><div id="status" class="profileInfo">` + profileAdressCombo + `</div>`;
         if (i == 5) {
-            if (pro.role[1] == true) lagrefill += `<div>Passenger:<div class="profileGreen"></div></div>`;
-            else if(pro.role[1] == null || pro.role[1] == false) lagrefill += `<div>Passenger:<div class="profileRed"></div></div>`;
+            if (pro.isPassenger == true) lagrefill += `<div>Passenger:<div class="profileGreen"></div></div>`;
+            else if(pro.isPassenger == null || pro.isPassenger == false) lagrefill += `<div>Passenger:<div class="profileRed"></div></div>`;
         }
         if (i == 6) {
-            if (pro.role[0] == true) {
+            if (pro.isDriver == true) {
                 lagrefill += `<div>Driver:<div class="profileGreen"></div></div>`;
             }
-            else if(pro.role[0] == null || pro.role[0] == false) {
+            else if(pro.isDriver == null || pro.isDriver == false) {
                 lagrefill += `<div>Driver:<div class="profileRed"></div></div>`;
             }
         }
@@ -57,8 +59,8 @@ function profileEdit()
     let pro = profileWho();
     let toggle1 = '';
     let toggle2 = '';
-    if(pro.role[1] == true) toggle1 = 'checked';
-    if(pro.role[0] == true) toggle2 = 'checked';
+    if(pro.isDriver == true) toggle1 = 'checked';
+    if(pro.isPassenger == true) toggle2 = 'checked';
     lagrefil += '<div class="ProfileBoks" id="boksf">';
     for (let i = 1; i < 7; i++) {
         lagrefil += '<div class="profile' + i + '">';
@@ -122,8 +124,8 @@ function saveProfile(element)
         if(!gatenavn.value == '')pro.gatenavn = gatenavn.value;
         if(!roadNumber.value == '')pro.husnr = roadNumber.value;
         if(!city.value == '')pro.city = city.value;
-        if(!pro.role[1] == passenger.checked)pro.role[1] = passenger.checked;
-        if(!pro.role[0] == driver.checked)pro.role[0] = driver.checked;
+        if(!pro.isPassenger == passenger.checked)pro.isPassenger = passenger.checked;
+        if(!pro.isDriver == driver.checked)pro.isDriver = driver.checked;
         showProPage();
     }
     else if(password.value == '' || passwordConfirm.value == '') element.innerHTML = `<div style="color:darkorange">One or more password field are empty!</div>`;

@@ -11,36 +11,23 @@ function headerCall()
     <div onclick="` + pageID[1] + `" class="backbutton">&lt;&lt</div>`;
     return headerTop;
 }
-
-var ProfileInfo =
-    [
-
-        {
-            username: 'Admin',
-            password: 'nimda',
-            phoneNumber: '12345678',
-            email: '123@jotron.com',
-            pickPoint: '124',
-            gatenavn: 'LARVIK',
-            role: [false, false]
-        }
-    ];
-
-function addProfile() {
-    var newItem = {};
-    newItem.username = document.getElementById('usernameValue').value;
-    newItem.password = document.getElementById('passwordValue').value;
-    newItem.phoneNumberNumber = document.getElementById('phoneNumberValue').value;
-    newItem.email = document.getElementById('emailValue').value;
-    newItem.pickPoint = document.getElementById('pickPointValue').value;
-    newItem.role[1] = document.getElementById('driverValue').toggle;
-    newItem.role[2] = document.getElementById('passengerValue').toggle;
-    allItems.push(newItem);
-}
-
-var passenger = {
+var passenger = 
+{
 
     passengers: [
+        {
+            name: 'Admin',
+            city: 'Ukjent ',
+            gatenavn: 'Hvor som helst',
+            husnr: ' med wifi/nettilgang ;P',
+            phoneNumber: '420',
+            username: 'Admin',
+            password: '123',
+            email: 'meme@at.com',
+            pickPoint: 'Server Room',
+            isPassenger: false,
+            isDriver: false
+        },
         {
             name: 'Magnus Viken',
             city: 'Tønsberg',
