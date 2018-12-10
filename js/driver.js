@@ -1,11 +1,8 @@
-function showDriver() {
+function showDriver() 
+{
+    pageID = ['Driver','showMenu()'];
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `
-
-    <div class="backtop"></div>
-    <div onclick="showMenu()" class="backbutton">&lt;&lt</div>
-
-    <div class="backheadtext">Driver</div>
+    mainContentDiv.innerHTML = headerCall() + `
 
     <div class="appointmentsh1">Your<br>appointments</div>
 

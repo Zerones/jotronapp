@@ -1,15 +1,8 @@
 function showpassReq() {
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = ` 
-
+    pageID = ['Password Request', 'showfrontPage()'];
+    mainContentDiv.innerHTML = headerCall() + ` 
     
-    <div class="backtop"></div>
-    <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
-
-    <div class="backheadtext">PassReq</div>
-    
-
-
     <div class="passreqfieldbox">
         <form action="#">
             Type inn your email address,<br>You will then get a password recovery link on email. <br />

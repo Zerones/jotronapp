@@ -1,6 +1,7 @@
 function passengerHistory() {
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `
+    pageID = ['History','showTheHistory()'];
+    mainContentDiv.innerHTML = headerCall() + `
 <div class="backtop"></div>
     <div onclick="showTheHistory()" class="backbutton">&lt;&lt</div>
 

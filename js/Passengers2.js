@@ -1,15 +1,7 @@
 function passenger() {
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `
-
-
-    <div class="backtop"></div>
-    <div onclick="showDriver()" class="backbutton">&lt;&lt</div>
-
-    <div class="backheadtext">Passenger</div>
-   
-        
-
+    pageID = ['Passenger','showDriver()'];
+    mainContentDiv.innerHTML = headerCall() + `
 
     <legend>Choose Date and Time</legend>
                 <div>
@@ -30,7 +22,7 @@ function passenger() {
                     <div class="Navn"><img class="portrett1" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200" /><div>Navn Navnesen</div></div>
                     <div class="Navn"><img class="portrett1" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200" /><div>Navn Navnesen</div></div>
                     <div class="Navn"><img class="portrett1" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200" /><div>Navn Navnesen</div></div>
-                   </div>
+                </div>
 `;
 }
 

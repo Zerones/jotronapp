@@ -1,8 +1,4 @@
-
-
-var pageID = ['',''];
 var profileAdressCombo;
-var headerProfile;
 var profileFill = `
 <div class="lele2"><h2></h2></div>    
 <div class="backgroundkaos" id="backgroundkaos"></div>      
@@ -24,13 +20,7 @@ function profileWho()
 }
 function showProPage() {
     var mainContentDiv = document.getElementById('mainContent');
-    pageID[0] = 'Profile';
-    pageID[1] = 'showMenu()';
-    headerProfile = `
-        <div class="backtop"></div>        
-        <div class="backheadtext">` + pageID[0] + `</div>
-        <div onclick="` + pageID[1] + `" class="backbutton">&lt;&lt</div>       
-    `;
+    pageID = ['Profile', 'showMenu()'];
     let pro = profileWho();
     let lagrefill;
     lagrefill = `<div class="ProfileBoks">`;
@@ -57,18 +47,13 @@ function showProPage() {
     }
     lagrefill += `<button type="button" class="proedit" onclick="profileEdit()">Edit Profile</button>`;
     lagrefill += `</div>`;
-    mainContentDiv.innerHTML = headerProfile + profileFill + lagrefill;
+    mainContentDiv.innerHTML = headerCall() + profileFill + lagrefill;
 }
 function profileEdit() 
 {
     pageID[1] = 'showProPage()';
-    headerProfile = `
-        <div class="backtop"></div>        
-        <div class="backheadtext">` + pageID[0] + `</div>
-        <div onclick="` + pageID[1] + `" class="backbutton">&lt;&lt</div>       
-    `;
     var mainContentDiv = document.getElementById('mainContent');
-    var lagrefil = headerProfile + profileFill;
+    var lagrefil = headerCall() + profileFill;
     let pro = profileWho();
     let toggle1 = '';
     let toggle2 = '';

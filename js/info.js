@@ -1,14 +1,7 @@
 function showInfo() {
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `
-
-     <div class="backtop"></div>
-     <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
-
-        <div class="backheadtext">   Info    </div>
-
-
-   
+    pageID = ['Info','showfrontPage()'];
+    mainContentDiv.innerHTML = headerCall() + `
 
     <p class="infotext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

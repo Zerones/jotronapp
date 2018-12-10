@@ -1,14 +1,9 @@
-function showregPage() {
+function showregPage() 
+{
+    pageID = ['Registration','showfrontPage()'];
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `
+    mainContentDiv.innerHTML = headerCall() + `
     
-   
-    <div class="backtop"></div>
-    <div class="backbutton" onclick="showfrontPage()">&lt;&lt</div>
-
-    <div class="backheadtext">Registration</div>
-
-
     <div class="appointmentsh1">Account creation</div>
 
     <div class="wrapacc">

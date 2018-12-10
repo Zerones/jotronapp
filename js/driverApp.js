@@ -1,10 +1,8 @@
 function driverApp() {
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `     
-
-    <div class="backtop"></div>        
-    <div class="backheadtext">   Driver    </div>
-    <div onclick="showPassengerAppointment()" class="backbutton"></div>&lt;&lt</a>       
+    pageID = ['Driver','showPassengerAppointment()'];
+    mainContentDiv.innerHTML = headerCall() + `     
+    
     <div class="lele2"><h2>Appointments:</h2></div>
     <div class="driverboks">       
 
