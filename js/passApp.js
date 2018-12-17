@@ -24,8 +24,32 @@ function checkAppointment() {
     let date = new Date();
     let showDate = date;
     var mainContentDiv = document.getElementById('mainContent');
-    mainContentDiv.innerHTML = `<h3 style= "color:white">you don't have appointments ${showDate.toLocaleString()} </h3>
-    <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+    if(passenger.passengers[userID].requests[0] === null)
+    {
+        mainContentDiv.innerHTML = `<h3 style= "color:white">you don't have appointments ${showDate.toLocaleString()} </h3>
+        <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+    }
+    else
+    {
+        let html = '<h3 style= "color:white">You have currently sent requests to:</h3>';
+        let requestlist = passenger.passengers;
+        for (var i = 0; i < requestlist.length; i++) 
+        {
+            if(requestlist[i].requests[0] = !null)
+            {
+                for(let k = 0; k < requestlist[i].requests.length; k++)
+                {
+                    if (requestlist[i].requests[k] == userID) 
+                    {
+                        html += `<div style="color:white">` + requestlist[i].name + `<div>`;
+                    }
+                }
+            }
+        }    
+        mainContentDiv.innerHTML = html + `<h3 style= "color:white">but you can send multiple requests  ${showDate.toLocaleString()} </h3>
+        <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+
+    }
 }
 function makeAppointment(dateNumber, driverId) {
     const date = new Date(dateNumber);
@@ -53,14 +77,15 @@ function selectDriverForAppointment(dateNumber) {
 
 }
 
-function getDrivers() {
+function getDrivers() 
+{
     const filteredUsers = [];
-    //let date = new Date
     const users = passenger.passengers;
-    let isDriver = '';
     for (var i = 0; i < users.length; i++) {
         const user = users[i];
-        if (user.isDriver) {
+        if(i === userID) continue;
+        if(user.isDriver) 
+        {
             filteredUsers.push(user);
         }
     }

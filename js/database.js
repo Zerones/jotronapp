@@ -26,8 +26,10 @@ var passenger =
             email: 'meme@at.com',
             pickPoint: 'Server Room',
             isPassenger: false,
-            isDriver: false
+            isDriver: false,
+            requests: []
         },
+
         {
             name: 'Magnus Viken',
             city: 'Tønsberg',
@@ -39,7 +41,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -53,7 +56,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -67,7 +71,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -81,7 +86,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -95,7 +101,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -109,7 +116,8 @@ var passenger =
             email: '124',
             pickPoint: '124',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -123,7 +131,8 @@ var passenger =
             username: 'Shafique',
             password: '123',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
 
@@ -138,7 +147,8 @@ var passenger =
             username: 'Terje',
             password: '123',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
 
         {
@@ -152,7 +162,8 @@ var passenger =
             username: 'Geir',
             password: '123',
             isPassenger: true,
-            isDriver: true
+            isDriver: true,
+            requests: []
         },
     ],
 

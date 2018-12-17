@@ -1384,3 +1384,19 @@ div.sikker {
     margin-left: 44vw;
     background-color: #882525;
 }
+.alertbox
+{
+    background-color: darkorange;
+    border: solid 1px black;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+    text-align: center; 
+    font-size: 28px;
+    padding: 20px;
+    max-width: 200px;
+    font-family: 'Franklin Gothic Medium';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

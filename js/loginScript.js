@@ -2,6 +2,7 @@
 function bypassLogin() {
     loggedInUser = 'Testbruker';
     nomberTelUser = 'nomber';
+    userID = '0';
     showMenu();
 }
 function dologInCheck() {

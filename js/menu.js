@@ -11,11 +11,10 @@ function showMenu() {
     <button onclick="showProPage()" class="m4">Profile</button>
     <button onclick="showTheHistory()" class="m5">History</button><br>
 
-    <button onclick="showfrontPage(); logout();" class="m6">Log out</button>
-
-        `;
+    <button onclick="showfrontPage(); logout();" class="m6">Log out</button>`;
+    appAlert();
 }
 function logout()
 {
-    userID = '';
+    userID = null;
 }
