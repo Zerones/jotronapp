@@ -14,7 +14,7 @@ function showreqPage()
 }
 function checkRequests()
 {
-    let requests = `<div style="margin-top: 100px">`;
+    let requests = `<div style="margin-top: 100px; color:white;"><h3>Pending passenger requests:</h3>`;
     for(i = 1; i < passenger.passengers[userID].requests.length; i++)
     {
         for(k = 0; k < passenger.passengers.length; k++)
