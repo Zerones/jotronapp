@@ -1,5 +1,4 @@
 function passenger() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['Passenger','showDriver()'];
     mainContentDiv.innerHTML = headerCall() + `
 

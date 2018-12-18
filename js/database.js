@@ -2,6 +2,7 @@ var userID;
 var loggedInUser;
 var nomberTelUser;
 var pageID = ['0','0'];
+var mainContentDiv;
 
 function headerCall()
 {

@@ -1,7 +1,6 @@
 function showDriver() 
 {
     pageID = ['Driver','showMenu()'];
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = headerCall() + `
 
     <div class="appointmentsh1">Your<br>appointments</div>

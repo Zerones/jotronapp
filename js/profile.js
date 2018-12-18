@@ -20,7 +20,6 @@ function profileWho()
     }
 }
 function showProPage() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['Profile', 'showMenu()'];
     let pro = profileWho();
     let lagrefill;
@@ -54,7 +53,6 @@ function showProPage() {
 function profileEdit() 
 {
     pageID[1] = 'showProPage()';
-    var mainContentDiv = document.getElementById('mainContent');
     var lagrefil = headerCall() + profileFill;
     let pro = profileWho();
     let toggle1 = '';

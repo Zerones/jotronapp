@@ -1,7 +1,6 @@
 function showregPage() 
 {
     pageID = ['Registration','showfrontPage()'];
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = headerCall() + `
     
     <div class="appointmentsh1">Account creation</div>
@@ -72,7 +71,6 @@ function addNewUser() {
         //newItem.pickPoint = pickPoint.value;
         passenger.passengers.push(newItem);
 
-        var mainContentDiv = document.getElementById('mainContent');
         mainContentDiv.innerHTML = ` 
 
 

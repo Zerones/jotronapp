@@ -7,7 +7,6 @@ function appAlert()
     }
     if(requestAlert == true)
     {
-        var mainContentDiv = document.getElementById('mainContent');
         mainContentDiv.innerHTML += `<div class="alertbox">You've pending driving requests</div>`;    
     }
 }

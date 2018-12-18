@@ -1,5 +1,6 @@
-function showMenu() {
-    var mainContentDiv = document.getElementById('mainContent');
+function showMenu()
+{
+    mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 
     <div class="m1"></div>

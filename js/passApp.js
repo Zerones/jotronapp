@@ -1,5 +1,4 @@
 function showPassengerAppointment() {
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
     <div class="backtop"></div>
     <div onclick="showMenu()" class="backbutton">&lt;&lt</div>
@@ -23,7 +22,6 @@ function showPassengerAppointment() {
 function checkAppointment() {
     let date = new Date();
     let showDate = date;
-    var mainContentDiv = document.getElementById('mainContent');
     if(passenger.passengers[userID].requests[0] === null)
     {
         mainContentDiv.innerHTML = `<h3 style= "color:white">you don't have appointments ${showDate.toLocaleString()} </h3>
@@ -72,7 +70,6 @@ function selectDriverForAppointment(dateNumber) {
         html += `</br>
         <a onclick="showTransportRequest(` + i + `)" style="color:white" href="javascript:makeAppointment(${dateNumber}, '${driver.username}')">${driver.name}</a><br/>`;
     }
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `<h3 style= "color:white">${showDate.toLocaleString()}</h3></br><h3 style="color:white">available drivers</h3>` + html;
 
 }

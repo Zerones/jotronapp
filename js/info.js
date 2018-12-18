@@ -1,5 +1,4 @@
 function showInfo() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['Info','showfrontPage()'];
     mainContentDiv.innerHTML = headerCall() + `
 

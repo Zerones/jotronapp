@@ -1,5 +1,4 @@
 function drivingWith () {
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 
     <div class="backtop"></div>

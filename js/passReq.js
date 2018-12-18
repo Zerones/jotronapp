@@ -1,5 +1,4 @@
 function showpassReq() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['Password Request', 'showfrontPage()'];
     mainContentDiv.innerHTML = headerCall() + ` 
     

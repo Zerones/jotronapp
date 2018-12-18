@@ -1,7 +1,6 @@
 
 function showTopcontributors() 
 {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['History','showTheHistory()'];
     mainContentDiv.innerHTML = headerCall() + `
 

@@ -1,6 +1,5 @@
 
 function showTheHistory() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['History','showMenu()'];
     mainContentDiv.innerHTML = headerCall() + `
 

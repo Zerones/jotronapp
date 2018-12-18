@@ -1,10 +1,7 @@
-console.log    
-function ShowDriverAppointments() {
+  function ShowDriverAppointments() {
     var trip = {
         passengers: [0, 1, 2, 4, 9]
     };
-
-    var mainContentDiv = document.getElementById('mainContent');
 
     mainContentDiv.innerHTML = `
             <div class="backtop"></div>

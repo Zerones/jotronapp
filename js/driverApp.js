@@ -1,5 +1,4 @@
 function driverApp() {
-    var mainContentDiv = document.getElementById('mainContent');
     pageID = ['Driver','showPassengerAppointment()'];
     mainContentDiv.innerHTML = headerCall() + `     
     

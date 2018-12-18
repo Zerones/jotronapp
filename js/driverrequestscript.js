@@ -1,5 +1,4 @@
 function passangerRequest() {
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 
 

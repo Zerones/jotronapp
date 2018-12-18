@@ -1,5 +1,4 @@
 function showTransportRequest(elementid) {
-    var mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = ``;
     let driver = getDrivers();
     let date = new Date();
