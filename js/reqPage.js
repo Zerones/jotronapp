@@ -47,7 +47,7 @@ function checkPassengers()
     }
     if(toggle1 == true)
     {
-       gave = `<div style="margin-top: 100px; color:white;"><h3>Current Passengers:</h>`;
+       gave = `<div style="margin-top: 250px; color:white;"><h3>Current Passengers:</h>`;
        gave += requests;
        requests += `</div>`;
     }
