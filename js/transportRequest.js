@@ -23,7 +23,7 @@ function sendRequest(sender, elementid)
     {
         if(driver == passenger.passengers[i].name)
         {
-            passenger.passengers[i].requests.push(sender);
+            passenger.passengers[i].requests[passenger.passengers[i].requests.length] = sender;
             showMenu();
         } 
     }

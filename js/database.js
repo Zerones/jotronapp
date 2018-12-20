@@ -28,7 +28,8 @@ var passenger =
             pickPoint: 'Server Room',
             isPassenger: false,
             isDriver: false,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -43,7 +44,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -58,7 +60,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -73,7 +76,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -88,7 +92,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -103,7 +108,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -118,7 +124,8 @@ var passenger =
             pickPoint: '124',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -133,7 +140,8 @@ var passenger =
             password: '123',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
 
@@ -149,7 +157,8 @@ var passenger =
             password: '123',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
 
         {
@@ -164,7 +173,8 @@ var passenger =
             password: '123',
             isPassenger: true,
             isDriver: true,
-            requests: []
+            requests: [],
+            listPassenger: []
         },
     ],
 
