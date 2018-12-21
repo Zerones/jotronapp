@@ -46,14 +46,44 @@ function checkAppointment()
         html = '<h3 style= "color:white">You have currently sent requests to:</h3>';
         html += lisst;
         html += `<h3 style= "color:white">but you can send multiple requests  ${showDate.toLocaleString()} </h3>
-            <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;    
+            <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+        html += confirmedAppointments();        
     }
     else
     {
         html = `<h3 style= "color:white">You've currently no active requests, click on the button under to send a request to a driver</h3>`;
         html += `<button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+        html += confirmedAppointments();
     }
     mainContentDiv.innerHTML = html;
+}
+function confirmedAppointments()
+{
+    let requests = '';
+    let toggle1 = false;
+    let gave;
+    for(i = 0; i < passenger.passengers.length; i++)
+    {
+        for(k = 0; k < passenger.passengers[i].listPassenger.length; k++)
+        {
+            if(userID == passenger.passengers[i].listPassenger[k])
+            {
+                requests += `<div>` + passenger.passengers[i].name + `</div>`;
+                toggle1 = true;
+            }
+        }
+    }
+    if(toggle1 == true)
+    {
+       gave = `<div style="margin-top: 150px; color:white;"><h3>Current Appointments:</h>`;
+       gave += requests;
+       gave += `</div>`;
+    }
+    else
+    {
+        gave = '';
+    }
+    return gave;
 }
 function makeAppointment(dateNumber, driverId) {
     const date = new Date(dateNumber);

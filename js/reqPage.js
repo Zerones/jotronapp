@@ -49,7 +49,7 @@ function checkPassengers()
     {
        gave = `<div style="margin-top: 250px; color:white;"><h3>Current Passengers:</h>`;
        gave += requests;
-       requests += `</div>`;
+       gave += `</div>`;
     }
     else
     {

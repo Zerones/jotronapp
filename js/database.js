@@ -3,6 +3,7 @@ var loggedInUser;
 var nomberTelUser;
 var pageID = ['0','0'];
 var mainContentDiv;
+var reminderlock = false; 
 
 function headerCall()
 {
