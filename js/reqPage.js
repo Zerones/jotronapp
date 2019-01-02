@@ -8,26 +8,36 @@ function showreqPage()
     }
     else
     {
-        content = ' <div class="m11" style="font-size: 30px; margin-top: 100px;">You have no pending requests at the moment, check back later</div>'
+        content = ' <div class="reqPageHead" style="margin-top: 100px;">You have no pending requests at the moment, check back later</div>'
         + checkPassengers();
     }    
     mainContentDiv.innerHTML = headerCall() + content;
 }
 function checkRequests()
 {
-    let requests = `<div style="margin-top: 100px; color:white;"><h3>Pending passenger requests:</h3>`;
+    let requests = `<div class="reqPageHead" style="margin-top: 100px;"><h3>Pending passenger requests:</h3>`;
     for(i = 1; i < passenger.passengers[userID].requests.length; i++)
     {
         for(k = 0; k < passenger.passengers.length; k++)
         {
             if(k == passenger.passengers[userID].requests[i])
             {
-                requests += `<div onclick="selectRequest(`+ i +`, `+ k +`)">` + passenger.passengers[k].name + `</div>`;
+                requests += `<div onmouseout="requestLightOff(this)" onmouseover="requestLightOn(this)" onclick="selectRequest(`+ i +`, `+ k +`)" class="nameListBox">
+                <img class="pictureList" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200"/>
+                <div class="nameListStyle">` + passenger.passengers[k].name + `</div></div>`;
             }
         }
     }
     requests += `</div>`;
     return requests;
+}
+function requestLightOn(element)
+{
+    element.style.border = "solid blue 3px";
+}
+function requestLightOff(element)
+{
+    element.style.border = null;
 }
 function checkPassengers()
 {
@@ -40,14 +50,15 @@ function checkPassengers()
         {
             if(k == passenger.passengers[userID].listPassenger[i])
             {
-                requests += `<div>` + passenger.passengers[k].name + `</div>`;
+                requests += `<div class="nameListBox"><img class="pictureList" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200"/><div class="nameListStyle">`
+                + passenger.passengers[k].name + `</div></div>`;
                 toggle1 = true;
             }
         }
     }
     if(toggle1 == true)
     {
-       gave = `<div style="margin-top: 250px; color:white;"><h3>Current Passengers:</h>`;
+       gave = `<div class="reqPageHead" style="margin-top: 100px;"><h3>Current Passengers:</h>`;
        gave += requests;
        gave += `</div>`;
     }
@@ -59,16 +70,26 @@ function checkPassengers()
 }
 function selectRequest(rqLength, pasLength)
 {
+    pageID = ['Requests','showreqPage()'];
     let content = `
-    <div class="request" style="color: white; margin-top: 100px">
+    <div class="nameListStyle" style="margin-top: 100px; color: white;">
     Do you wish to accept<br/>
     Name: `+ passenger.passengers[pasLength].name +`
     <br/>
     Transport Request<br/>
-    <button id="yesButton" onclick="acceptRequest(`+ rqLength +`, `+ pasLength + `); showreqPage()">Yes</button>
-    <button id="NoButton" onclick =" cancelRequest(`+ rqLength +`);showreqPage()">No</button>
+    <button id="yesButton" class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)" onclick="acceptRequest(`+ rqLength +`, `+ pasLength + `); showreqPage()">Yes</button>
+    <button id="NoButton" class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)"onclick ="cancelRequest(`+ rqLength +`);showreqPage()">No</button>
     </div>`;
     mainContentDiv.innerHTML = headerCall() + content;
+}
+function yesNoLightOn(element)
+{
+    element.style.backgroundColor = `#abb7c3`;   
+}
+function yesNoLightOff(element)
+{
+    element.style.backgroundColor = `#193759`;   
+
 }
 function acceptRequest(rqLength, pasLength)
 {

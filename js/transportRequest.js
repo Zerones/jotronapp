@@ -1,18 +1,20 @@
-function showTransportRequest(elementid) {
+function showTransportRequest(elementid) 
+{
+    pageID = ['Passenger','checkAppointment()'];
     mainContentDiv.innerHTML = ``;
     let driver = getDrivers();
     let date = new Date();
     let showDate = date;
     let driverName = driver[elementid]
     let requestPage = `
-            <div class="request" style="color: white">
+            <div class="nameListStyle" style="color: white; margin-top: 100px;">
             Do you wish to send<br/>
             Name: ${driverName.name},<br/> ${showDate.toLocaleString()} <br/>
             Transport Request<br/>
-            <button id="yesButton" onclick="sendRequest(`+ userID +`, `+ elementid +`)">Yes</button>
-            <button id="NoButton" onclick ="checkAppointment()">No</button>
+            <button id="yesButton" class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)" onclick="sendRequest(`+ userID +`, `+ elementid +`)">Yes</button>
+            <button id="NoButton" class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)" onclick ="checkAppointment()">No</button>
         </div>`;
-    mainContentDiv.innerHTML = requestPage;
+    mainContentDiv.innerHTML = headerCall() + requestPage;
 
 }
 function sendRequest(sender, elementid)

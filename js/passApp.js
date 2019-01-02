@@ -1,10 +1,7 @@
-function showPassengerAppointment() {
-    mainContentDiv.innerHTML = `
-    <div class="backtop"></div>
-    <div onclick="showMenu()" class="backbutton">&lt;&lt</div>
-
-    <div class="backheadtext">Passenger</div>
-
+function showPassengerAppointment() 
+{
+    pageID = ['Passenger','showMenu()'];
+    mainContentDiv.innerHTML = headerCall() + `
     <div class="appointmentsh1">Your<br>appointments</div>
 
     <div class="appointmentbox1" onclick="checkAppointment()">Monday</div>
@@ -15,12 +12,11 @@ function showPassengerAppointment() {
 
     <div class="weekback">&lt&lt</div>
     <div class="weeknext">&gt&gt</div>
-
-
  `;
 }
 function checkAppointment() 
 {
+    pageID = ['Passenger','showPassengerAppointment()'];
     let date = new Date();
     let showDate = date;
     let html;
@@ -43,19 +39,19 @@ function checkAppointment()
     }
     if(toggy == true)
     {
-        html = '<h3 style= "color:white">You have currently sent requests to:</h3>';
+        html = '<h3 class="nameListStyle" style="color:white;margin-top:100px;">You have currently sent requests to:</h3>';
         html += lisst;
-        html += `<h3 style= "color:white">but you can send multiple requests  ${showDate.toLocaleString()} </h3>
-            <button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+        html += `<h3 class="nameListStyle" style="color:white">but you can send multiple requests  ${showDate.toLocaleString()} </h3>
+            <button class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)" onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
         html += confirmedAppointments();        
     }
     else
     {
-        html = `<h3 style= "color:white">You've currently no active requests, click on the button under to send a request to a driver</h3>`;
-        html += `<button onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
+        html = `<h3 class="nameListStyle" style="color:white; margin-top: 100px;">You've currently no active requests, click on the button under to send a request to a driver</h3>`;
+        html += `<button class="proedit" style="background-color: #193759;" onmouseover="yesNoLightOn(this)" onmouseout="yesNoLightOff(this)" onclick="selectDriverForAppointment(new Date(2018, 11, 07))">Click here to make appointment</button>`;
         html += confirmedAppointments();
     }
-    mainContentDiv.innerHTML = html;
+    mainContentDiv.innerHTML = headerCall() + html;
 }
 function confirmedAppointments()
 {
@@ -75,7 +71,7 @@ function confirmedAppointments()
     }
     if(toggle1 == true)
     {
-       gave = `<div style="margin-top: 150px; color:white;"><h3>Current Appointments:</h>`;
+       gave = `<div class="nameListStyle" style="margin-top: 150px; color:white;"><h3 class="nameListStyle">Current Appointments:</h>`;
        gave += requests;
        gave += `</div>`;
     }
@@ -85,7 +81,8 @@ function confirmedAppointments()
     }
     return gave;
 }
-function makeAppointment(dateNumber, driverId) {
+function makeAppointment(dateNumber, driverId)
+{
     const date = new Date(dateNumber);
     const request = {
         driver: driverId,
@@ -96,7 +93,9 @@ function makeAppointment(dateNumber, driverId) {
     requests.push(request);
 }
 
-function selectDriverForAppointment(dateNumber) {
+function selectDriverForAppointment(dateNumber) 
+{
+    pageID = ['Passenger','checkAppointment()'];
     const drivers = getDrivers();
     let date = new Date();
     let showDate = date;
@@ -104,9 +103,9 @@ function selectDriverForAppointment(dateNumber) {
     for (let i = 0; i < drivers.length; i++) {
         const driver = drivers[i];
         html += `</br>
-        <a onclick="showTransportRequest(` + i + `)" style="color:white" href="javascript:makeAppointment(${dateNumber}, '${driver.username}')">${driver.name}</a><br/>`;
+        <a class="nameListStyle" onclick="showTransportRequest(` + i + `)" style="color:white" href="javascript:makeAppointment(${dateNumber}, '${driver.username}')">${driver.name}</a><br/>`;
     }
-    mainContentDiv.innerHTML = `<h3 style= "color:white">${showDate.toLocaleString()}</h3></br><h3 style="color:white">available drivers</h3>` + html;
+    mainContentDiv.innerHTML = headerCall() + `<h3 class="nameListStyle" style= "color:white">${showDate.toLocaleString()}</h3></br><h3 style="color:white">available drivers</h3>` + html;
 
 }
 

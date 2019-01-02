@@ -1400,3 +1400,31 @@ div.sikker {
     bottom: 0;
     right: 0;
 }
+.reqPageHead
+{
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium';
+}
+.nameListBox
+{
+    background: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.nameListStyle
+{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium';
+    color: black;
+}
+.pictureList
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 5px;
+}
