@@ -30,7 +30,8 @@ var passenger =
             isPassenger: false,
             isDriver: false,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -46,7 +47,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -62,7 +64,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -78,7 +81,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -94,7 +98,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -110,7 +115,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -126,7 +132,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -142,7 +149,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
 
@@ -159,7 +167,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
 
         {
@@ -175,7 +184,8 @@ var passenger =
             isPassenger: true,
             isDriver: true,
             requests: [],
-            listPassenger: []
+            listPassenger: [],
+            picture: 'https://i.imgur.com/HPEyIPn.png'
         },
     ],
 

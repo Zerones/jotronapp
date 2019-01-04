@@ -1424,7 +1424,20 @@ div.sikker {
 .pictureList
 {
     height: 100px;
-    width: 100px;
+    width: 110px;
     border-radius: 50px;
     margin: 5px;
+}
+.profilePictureEdit
+{
+    background: white;
+    color: black;
+    border-radius: 1em;
+    border: darkblue 5px solid;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }

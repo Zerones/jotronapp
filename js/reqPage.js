@@ -23,7 +23,7 @@ function checkRequests()
             if(k == passenger.passengers[userID].requests[i])
             {
                 requests += `<div onmouseout="requestLightOff(this)" onmouseover="requestLightOn(this)" onclick="selectRequest(`+ i +`, `+ k +`)" class="nameListBox">
-                <img class="pictureList" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200"/>
+                <img class="pictureList" src="`+ passenger.passengers[k].picture +`"/>
                 <div class="nameListStyle">` + passenger.passengers[k].name + `</div></div>`;
             }
         }
@@ -33,11 +33,16 @@ function checkRequests()
 }
 function requestLightOn(element)
 {
-    element.style.border = "solid blue 3px";
+    element.style.border = "solid blue 2px";
+    element.style.marginLeft = "3px";
+    element.style.marginRight = "3px";
+
 }
 function requestLightOff(element)
 {
     element.style.border = null;
+    element.style.marginLeft = "5px";
+    element.style.marginRight = "5px";
 }
 function checkPassengers()
 {
@@ -50,7 +55,7 @@ function checkPassengers()
         {
             if(k == passenger.passengers[userID].listPassenger[i])
             {
-                requests += `<div class="nameListBox"><img class="pictureList" src="https://dms-cf-03.dimu.org/image/032ynUtc35Jh?dimension=1200x1200"/><div class="nameListStyle">`
+                requests += `<div class="nameListBox"><img class="pictureList" src="`+ passenger.passengers[k].picture +`"/><div class="nameListStyle">`
                 + passenger.passengers[k].name + `</div></div>`;
                 toggle1 = true;
             }

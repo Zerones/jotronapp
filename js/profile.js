@@ -1,8 +1,9 @@
 var profileAdressCombo;
+var editingEnabled = false;
 var profileFill = `
 <div class="lele2"><h2></h2></div>    
 <div class="backgroundkaos" id="backgroundkaos"></div>      
-<div class="profileBilde"></div>`;
+<div class="profileBilde" id="profilePic" onclick="editPicture()" onmouseover="pictureLightOn(this)" onmouseout="pictureLightOff(this)"></div>`;
 
 function profileWho() 
 {
@@ -19,7 +20,18 @@ function profileWho()
         return passenger.passengers[userID];
     }
 }
-function showProPage() {
+function pictureLightOn(element)
+{
+    if(editingEnabled == true)element.style.border = "solid blue 2px";
+    else return;
+}
+function pictureLightOff(element)
+{
+    element.style.border = "solid 1px gray";
+}
+function showProPage() 
+{
+    editingEnabled = false;
     pageID = ['Profile', 'showMenu()'];
     let pro = profileWho();
     let lagrefill;
@@ -49,7 +61,16 @@ function showProPage() {
     lagrefill += `<button type="button" class="proedit" onclick="profileEdit()">Edit Profile</button>`;
     lagrefill += `</div>`;
     mainContentDiv.innerHTML = headerCall() + profileFill + lagrefill;
+    if(pro.picture == null)
+    {
+        return; 
+    }
+    else
+    {
+        profilePic.style.backgroundImage = `url(`+ pro.picture + `)`;
+    }
 }
+
 function profileEdit() 
 {
     pageID[1] = 'showProPage()';
@@ -89,7 +110,43 @@ function profileEdit()
                                                                     'profile7 profile7'
         `;
     document.getElementById("backgroundkaos").style.height = '630px';
-
+    editingEnabled = true;
+    if(pro.picture == null)
+    {
+        return; 
+    }
+    else
+    {
+        profilePic.style.backgroundImage = `url(`+ pro.picture + `)`;
+    }
+}
+function editPicture()
+{
+    if(editingEnabled == true)
+    {
+        document.getElementById("boksf").style.filter =  "blur(4px)";
+        document.getElementById("profilePic").style.filter =  "blur(4px)";
+        document.getElementById("backgroundkaos").style.filter =  "blur(4px)";
+        let test = document.createElement("test");
+        test.innerHTML += `<div class="profilePictureEdit" style="filter:none">New Picture(link):<br><input type="text"  value="`+ passenger.passengers[userID].picture +`" id="pictureValue"><br><button type="button" class="proedit" onclick="savePicture()">Save Picture</button></div>`;
+        mainContentDiv.appendChild(test.firstChild);
+    }
+    else
+    {
+        return;
+    }
+}
+function savePicture()
+{
+    let picture = document.getElementById("pictureValue")
+    if(!picture == '')
+    {
+        document.getElementById("boksf").style.filter =  "blur(0)";
+        document.getElementById("profilePic").style.filter =  "blur(0)";
+        document.getElementById("backgroundkaos").style.filter =  "blur(0)";
+        passenger.passengers[userID].picture = picture.value;
+        profileEdit();
+    }
 }
 function saveProfile(element) 
 {
