@@ -31,7 +31,8 @@ function checkAppointment()
             {
                 if (requestlist[i].requests[k] == userID && k == !0) 
                 {
-                    lisst += `<div style="color:white">` + requestlist[i].name + `<div>`;
+                    lisst += `<div class="nameListBox"><img class="pictureList" src="`+ requestlist[i].picture +`"/>
+                    <div class="nameListStyle">` + requestlist[i].name + `</div></div><br/>`;
                     toggy = true;
                 }
             }
@@ -64,14 +65,15 @@ function confirmedAppointments()
         {
             if(userID == passenger.passengers[i].listPassenger[k])
             {
-                requests += `<div>` + passenger.passengers[i].name + `</div>`;
+                requests +=`<div onmouseout="requestLightOff(this)" class="nameListBox"><img class="pictureList" src="`+ passenger.passengers[i].picture +`"/>
+                <div class="nameListStyle">` + passenger.passengers[i].name + `</div></div><br/>`;
                 toggle1 = true;
             }
         }
     }
     if(toggle1 == true)
     {
-       gave = `<div class="nameListStyle" style="margin-top: 150px; color:white;"><h3 class="nameListStyle">Current Appointments:</h>`;
+       gave = `<div class="nameListStyle" style="margin-top:150px;color:white;"><h3 style="color:white" class="nameListStyle">Current Appointments:</h>`;
        gave += requests;
        gave += `</div>`;
     }
@@ -100,9 +102,9 @@ function selectDriverForAppointment(dateNumber)
     let date = new Date();
     let showDate = date;
     let html = '';
-    for (let i = 0; i < drivers.length; i++) {
-        const driver = drivers[i];
-        html += `<div onmouseout="requestLightOff(this)" onmouseover="requestLightOn(this)" onclick="showTransportRequest(`+ i +`)" class="nameListBox"><img class="pictureList" src="`+ passenger.passengers[k].picture +`"/>
+    for (let i = 0; i < drivers.length; i++) 
+    {
+        html += `<div onmouseout="requestLightOff(this)" onmouseover="requestLightOn(this)" onclick="showTransportRequest(`+ i +`)" class="nameListBox"><img class="pictureList" src="`+ drivers[i].picture +`"/>
         <div class="nameListStyle">` + drivers[i].name + `</div></div><br/>`;
     }
     mainContentDiv.innerHTML = headerCall() + `<h3 class="nameListStyle" style= "color:white">${showDate.toLocaleString()}</h3></br><h3 style="color:white">available drivers</h3>` + html;
