@@ -102,8 +102,8 @@ function selectDriverForAppointment(dateNumber)
     let html = '';
     for (let i = 0; i < drivers.length; i++) {
         const driver = drivers[i];
-        html += `</br>
-        <a class="nameListStyle" onclick="showTransportRequest(` + i + `)" style="color:white" href="javascript:makeAppointment(${dateNumber}, '${driver.username}')">${driver.name}</a><br/>`;
+        html += `<div onmouseout="requestLightOff(this)" onmouseover="requestLightOn(this)" onclick="showTransportRequest(`+ i +`)" class="nameListBox"><img class="pictureList" src="`+ passenger.passengers[k].picture +`"/>
+        <div class="nameListStyle">` + drivers[i].name + `</div></div><br/>`;
     }
     mainContentDiv.innerHTML = headerCall() + `<h3 class="nameListStyle" style= "color:white">${showDate.toLocaleString()}</h3></br><h3 style="color:white">available drivers</h3>` + html;
 

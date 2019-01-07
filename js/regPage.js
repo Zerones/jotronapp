@@ -64,11 +64,12 @@ function addNewUser() {
         newItem.phoneNumber = phoneNumber;
         newItem.houseNumber = houseNumber;
         newItem.streetName = streetName;
-        //newItem.pickPoint = pickPoint;
+        newItem.request = [];
+        newItem.listPassenger = [];
+        newItem.picture = ``; 
+        newItem.pickPoint = ``;
         newItem.role = [false, false];
         newItem.city = city;
-
-        //newItem.pickPoint = pickPoint.value;
         passenger.passengers.push(newItem);
 
         mainContentDiv.innerHTML = ` 

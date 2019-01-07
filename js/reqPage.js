@@ -8,7 +8,7 @@ function showreqPage()
     }
     else
     {
-        content = ' <div class="reqPageHead" style="margin-top: 100px;">You have no pending requests at the moment, check back later</div>'
+        content = '<div class="reqPageHead" style="margin-top: 100px;">You have no pending requests at the moment, check back later</div>'
         + checkPassengers();
     }    
     mainContentDiv.innerHTML = headerCall() + content;
@@ -33,16 +33,11 @@ function checkRequests()
 }
 function requestLightOn(element)
 {
-    element.style.border = "solid blue 2px";
-    element.style.marginLeft = "3px";
-    element.style.marginRight = "3px";
-
+    element.style.backgroundColor = `lightblue`;
 }
 function requestLightOff(element)
 {
-    element.style.border = null;
-    element.style.marginLeft = "5px";
-    element.style.marginRight = "5px";
+    element.style.backgroundColor = `white`;
 }
 function checkPassengers()
 {
