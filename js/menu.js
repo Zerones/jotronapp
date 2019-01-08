@@ -10,6 +10,7 @@ function showMenu()
     <button onclick="showDriver()" class="m3">Driver</button>
     <button onclick="showPassengerAppointment()" class="m3">Passenger</button><br>
     <button onclick="showProPage()" class="m4">Profile</button>
+    <button onclick="startTour()" class="m5">Start tour</button>
     <button onclick="showTheHistory()" class="m5">History</button><br>
 
     <button onclick="showfrontPage(); logout();" class="m6">Log out</button>`;

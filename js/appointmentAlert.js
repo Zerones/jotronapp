@@ -1,23 +1,25 @@
 function appAlert()
 {
-    let requestAlert = false; 
     if(passenger.passengers[userID].requests.length > 1)
-    {
-        requestAlert = true;
-    }
-    if(requestAlert == true)
     {
         mainContentDiv.innerHTML += `<div class="alertbox">You've pending driving requests</div>`;    
     }
-    for(i = 0; i < passenger.passengers.length; i++)
+    else if(passenger.passengers[userID].alert == true)
     {
-        for(k = 0; k < passenger.passengers[i].listPassenger.length; k++)
+        mainContentDiv.innerHTML += `<div class="alertbox">Driver is now on their way to pick you up</div>`;    
+    }
+    else
+    {
+        for(i = 0; i < passenger.passengers.length; i++)
         {
-            if(userID == passenger.passengers[i].listPassenger[k] && reminderlock == false)
+            for(k = 0; k < passenger.passengers[i].listPassenger.length; k++)
             {
-                mainContentDiv.innerHTML += `<div class="alertbox" style="background-color: green;">You've recieved a driver!</div>`; 
-                reminderlock = true; 
+                if(userID == passenger.passengers[i].listPassenger[k] && reminderlock == false)
+                {
+                    mainContentDiv.innerHTML += `<div class="alertbox" style="background-color: green;">You've recieved a driver!</div>`; 
+                    reminderlock = true; 
+                }
             }
-        }
+        }    
     }
 }

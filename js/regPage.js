@@ -69,6 +69,7 @@ function addNewUser() {
         newItem.picture = ``; 
         newItem.pickPoint = ``;
         newItem.role = [false, false];
+        newItem.alert = false;
         newItem.city = city;
         passenger.passengers.push(newItem);
 
