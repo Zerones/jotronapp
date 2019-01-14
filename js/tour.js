@@ -34,6 +34,7 @@ function sendAlert(pass, element)
 {
     passenger.passengers[pass].alert = true;
     element.style.backgroundColor = 'green';
+    fullUpdate();
     colorCorrector();
 }
 

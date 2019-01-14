@@ -145,6 +145,7 @@ function savePicture()
         document.getElementById("profilePic").style.filter =  "blur(0)";
         document.getElementById("backgroundkaos").style.filter =  "blur(0)";
         passenger.passengers[userID].picture = picture.value;
+        userUpdate();
         profileEdit();
     }
 }
@@ -181,6 +182,7 @@ function saveProfile(element)
         if(!city.value == '')pro.city = city.value;
         if(!pro.isPassenger == passenger.checked)pro.isPassenger = passenger.checked;
         if(!pro.isDriver == driver.checked)pro.isDriver = driver.checked;
+        userUpdate();
         showProPage();
     }
     else if(password.value == '' || passwordConfirm.value == '') element.innerHTML = `<div style="color:darkorange">One or more password field are empty!</div>`;

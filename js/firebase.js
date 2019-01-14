@@ -12,15 +12,71 @@ const firestore = firebase.firestore();
 const settings = {timestampsInSnapshots: true};
 firestore.settings(settings);
 var firedata = firebase.firestore();
-firedata.collection('users').get().then(
+firedata.collection('users').onSnapshot(
     function(collectionSnapshot)
     {
+        let counter = 0;
         collectionSnapshot.forEach(
             function (testSnapshot)
             {
-                console.log(testSnapshot.data());
-
+                passenger.passengers[counter] = testSnapshot.data();
+                counter++; 
             }
         );
     }
 );
+
+function userUpdate()
+{
+    let dataID = passenger.passengers[userID];
+    firedata.collection("users").doc(dataID.username).set(
+        {
+            name: dataID.name,
+            city: dataID.city, 
+            gatenavn: dataID.gatenavn,
+            husnr: dataID.husnr,
+            phoneNumber: dataID.phoneNumber,
+            username: dataID.username,
+            password: dataID.password,
+            email: dataID.email,
+            pickPoint: dataID.pickPoint,
+            isPassenger: dataID.isPassenger,
+            isDriver: dataID.isDriver,
+            requests: dataID.requests,
+            listPassenger: dataID.listPassenger,
+            picture: dataID.picture,
+            alert: dataID.alert  
+        }).then(function()
+        {
+            return; 
+        });
+}
+
+function fullUpdate()
+{
+    for(let i = 0; i < passenger.passengers.length; i++)
+    {
+        let dataID = passenger.passengers[i];
+        firedata.collection("users").doc(dataID.username).set(
+        {
+            name: dataID.name,
+            city: dataID.city, 
+            gatenavn: dataID.gatenavn,
+            husnr: dataID.husnr,
+            phoneNumber: dataID.phoneNumber,
+            username: dataID.username,
+            password: dataID.password,
+            email: dataID.email,
+            pickPoint: dataID.pickPoint,
+            isPassenger: dataID.isPassenger,
+            isDriver: dataID.isDriver,
+            requests: dataID.requests,
+            listPassenger: dataID.listPassenger,
+            picture: userID.picture,
+            alert: dataID.alert  
+        }).then(function()
+        {
+            return;
+        });
+    }
+}

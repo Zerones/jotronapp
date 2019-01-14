@@ -72,6 +72,7 @@ function addNewUser() {
         newItem.alert = false;
         newItem.city = city;
         passenger.passengers.push(newItem);
+        fullUpdate();
 
         mainContentDiv.innerHTML = ` 
 

@@ -95,9 +95,11 @@ function acceptRequest(rqLength, pasLength)
 {
     passenger.passengers[userID].requests.splice(rqLength, 1)
     passenger.passengers[userID].listPassenger.push(pasLength);
+    fullUpdate();
 }
 
 function cancelRequest(rqLength)
 {
     passenger.passengers[userID].requests.splice(rqLength, 1)
+    fullUpdate();
 }
