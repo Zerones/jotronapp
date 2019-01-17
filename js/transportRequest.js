@@ -1,6 +1,7 @@
 function showTransportRequest(elementid) 
 {
     pageID = ['Passenger','checkAppointment()'];
+    currentPage = 'showtransportrequest';
     mainContentDiv.innerHTML = ``;
     let driver = getDrivers();
     let date = new Date();
@@ -26,6 +27,7 @@ function sendRequest(sender, elementid)
         if(driver == passenger.passengers[i].name)
         {
             passenger.passengers[i].requests[passenger.passengers[i].requests.length] = sender;
+            getUserData();
             showMenu();
         } 
     }

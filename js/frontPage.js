@@ -1,5 +1,7 @@
 
-function showfrontPage() {
+function showfrontPage() 
+{
+    currentPage = 'login';
     mainContentDiv = document.getElementById('mainContent');
     mainContentDiv.innerHTML = `
 

@@ -1,6 +1,7 @@
 function startTour()
 {
     pageID = ['Tour','showMenu()'];
+    currentPage = 'tour';
     if(passenger.passengers[userID].listPassenger.length >= 1)
     {
         mainContentDiv.innerHTML = headerCall() + listTour();
@@ -34,7 +35,7 @@ function sendAlert(pass, element)
 {
     passenger.passengers[pass].alert = true;
     element.style.backgroundColor = 'green';
-    fullUpdate();
+    getUserData();
     colorCorrector();
 }
 

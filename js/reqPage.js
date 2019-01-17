@@ -1,6 +1,7 @@
 function showreqPage() 
 {
     let content;
+    currentPage = 'driverrequests';
     pageID = ['Requests','showMenu()'];
     if(passenger.passengers[userID].requests.length > 1)
     {
@@ -70,6 +71,7 @@ function checkPassengers()
 }
 function selectRequest(rqLength, pasLength)
 {
+    currentPage = 'selectrequests';
     pageID = ['Requests','showreqPage()'];
     let content = `
     <div class="nameListStyle" style="margin-top: 100px; color: white;">
@@ -95,11 +97,11 @@ function acceptRequest(rqLength, pasLength)
 {
     passenger.passengers[userID].requests.splice(rqLength, 1)
     passenger.passengers[userID].listPassenger.push(pasLength);
-    fullUpdate();
+    getUserData();
 }
 
 function cancelRequest(rqLength)
 {
     passenger.passengers[userID].requests.splice(rqLength, 1)
-    fullUpdate();
+    getUserData();
 }

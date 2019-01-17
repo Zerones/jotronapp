@@ -4,6 +4,7 @@ var nomberTelUser;
 var pageID = ['0','0'];
 var mainContentDiv;
 var reminderlock = false; 
+var currentPage = '';
 
 function headerCall()
 {

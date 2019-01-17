@@ -1,6 +1,7 @@
 function showPassengerAppointment() 
 {
     pageID = ['Passenger','showMenu()'];
+    currentPage = 'passangerappointment';
     mainContentDiv.innerHTML = headerCall() + `
     <div class="appointmentsh1">Your<br>appointments</div>
 
@@ -17,6 +18,7 @@ function showPassengerAppointment()
 function checkAppointment() 
 {
     pageID = ['Passenger','showPassengerAppointment()'];
+    currentPage = 'passangerappointmentlist';
     let date = new Date();
     let showDate = date;
     let html;
@@ -98,6 +100,7 @@ function makeAppointment(dateNumber, driverId)
 function selectDriverForAppointment(dateNumber) 
 {
     pageID = ['Passenger','checkAppointment()'];
+    currentPage = 'passangerorderappointment';
     const drivers = getDrivers();
     let date = new Date();
     let showDate = date;

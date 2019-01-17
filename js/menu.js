@@ -14,6 +14,7 @@ function showMenu()
     <button onclick="showTheHistory()" class="m5">History</button><br>
 
     <button onclick="showfrontPage(); logout();" class="m6">Log out</button>`;
+    currentPage = 'meny';
     appAlert();
 }
 function logout()

@@ -1,6 +1,7 @@
 function ShowDriverAppointments() 
 {
-    pageID = ['Passengers','showDriver()']
+    pageID = ['Passengers','showDriver()'];
+    currentPage = 'driverappointments';
     let list = checkPassengers();
     if(list == ``)
     {

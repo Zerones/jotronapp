@@ -34,10 +34,8 @@ function showregPage()
 
         `;
 }
-function addNewUser() {
-
-
-
+function addNewUser() 
+{
     var username = document.getElementById('usernameregTxt').value;
     var email = document.getElementById('emailTxt').value;
     var password = document.getElementById('passwordregTxt').value;
@@ -72,8 +70,7 @@ function addNewUser() {
         newItem.alert = false;
         newItem.city = city;
         passenger.passengers.push(newItem);
-        fullUpdate();
-
+        getUserData();
         mainContentDiv.innerHTML = ` 
 
 

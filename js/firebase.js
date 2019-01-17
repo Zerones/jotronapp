@@ -20,11 +20,23 @@ firedata.collection('users').onSnapshot(
             function (testSnapshot)
             {
                 passenger.passengers[counter] = testSnapshot.data();
-                counter++; 
+                counter++;
+                dataBaseUpdate();
             }
         );
     }
 );
+
+function dataBaseUpdate()
+{
+    if(currentPage == 'profile') showProPage();
+    if(currentPage == 'driverappointments') ShowDriverAppointments();
+    if(currentPage == 'meny') showMenu();
+    if(currentPage == 'passangerappointmentlist') checkAppointment();
+    if(currentPage == 'passangerorderappointment') selectDriverForAppointment();
+    if(currentPage == 'driverrequests') showreqPage();
+    if(currentPage == 'tour') startTour();
+}
 
 function userUpdate()
 {
@@ -51,32 +63,51 @@ function userUpdate()
             return; 
         });
 }
-
-function fullUpdate()
+function getUserData()
 {
     for(let i = 0; i < passenger.passengers.length; i++)
     {
         let dataID = passenger.passengers[i];
-        firedata.collection("users").doc(dataID.username).set(
+        let name = dataID.name;
+        let city = dataID.city;
+        let gatenavn = dataID.gatenavn;
+        let husnr = dataID.husnr;
+        let phoneNumber = dataID.phoneNumber;
+        let username = dataID.username;
+        let password = dataID.password;
+        let email = dataID.email;
+        let pickPoint = dataID.pickPoint;
+        let isPassenger = dataID.isPassenger;
+        let isDriver = dataID.isDriver;
+        let requests = dataID.requests;
+        let listPassenger = dataID.listPassenger;
+        let picture = dataID.picture;
+        let alert = dataID.alert; 
+        fullUpdate( name, city, gatenavn, husnr, phoneNumber, username, password, email, pickPoint, isPassenger, isDriver, picture, alert, requests, listPassenger)
+    }
+}
+function fullUpdate(name, city, gatenavn, husnr, phoneNumber, username, password, email, pickPoint, isPassenger, isDriver, picture, alert, requests, listPassenger)
+{
+        firedata.collection("users").doc(username).set(
         {
-            name: dataID.name,
-            city: dataID.city, 
-            gatenavn: dataID.gatenavn,
-            husnr: dataID.husnr,
-            phoneNumber: dataID.phoneNumber,
-            username: dataID.username,
-            password: dataID.password,
-            email: dataID.email,
-            pickPoint: dataID.pickPoint,
-            isPassenger: dataID.isPassenger,
-            isDriver: dataID.isDriver,
-            requests: dataID.requests,
-            listPassenger: dataID.listPassenger,
-            picture: userID.picture,
-            alert: dataID.alert  
+            name: name,
+            city: city, 
+            gatenavn: gatenavn,
+            husnr: husnr,
+            phoneNumber: phoneNumber,
+            username: username,
+            password: password,
+            email: email,
+            pickPoint: pickPoint,
+            isPassenger: isPassenger,
+            isDriver: isDriver,
+            picture: picture,
+            alert: alert,
+            requests: requests,
+            listPassenger: listPassenger,
         }).then(function()
         {
             return;
         });
-    }
 }
+

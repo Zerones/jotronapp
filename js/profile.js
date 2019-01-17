@@ -1,4 +1,5 @@
 var profileAdressCombo;
+var onProfil = false;
 var editingEnabled = false;
 var profileFill = `
 <div class="lele2"><h2></h2></div>    
@@ -31,6 +32,7 @@ function pictureLightOff(element)
 }
 function showProPage() 
 {
+    currentPage = 'profile';
     editingEnabled = false;
     pageID = ['Profile', 'showMenu()'];
     let pro = profileWho();
@@ -73,6 +75,7 @@ function showProPage()
 
 function profileEdit() 
 {
+    currentPage = 'profileEdit';
     pageID[1] = 'showProPage()';
     var lagrefil = headerCall() + profileFill;
     let pro = profileWho();
